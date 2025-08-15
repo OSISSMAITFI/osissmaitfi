@@ -66,7 +66,9 @@ We welcome contributions from all students! Feel free to:
 	BY: @biezz-2
 </div>
 
+<div align="center">
 Dibuat otomatis oleh tooling lokal untuk mempercepat setup.
+</div>
 
 ## Cara upload / push repo ini ke GitHub
 
