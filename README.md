@@ -44,10 +44,10 @@ Welcome to the official repository of OSIS SMAIT Fithrah ! This repository serve
 
 ## 📞 Contact
 
-- 📧 Email: [osissmaitfi@gmail.com]
-- 📱 Instagram: [https://www.instagram.com/osissmaitfi/]
-- 🌐 Website: [https://osissmaitfi.github.io/osissmaitfi/]
-- contributed by [https://github.com/biezz-2]
+- 📧 Email: [osissmaitfi@gmail.com](osissmaitfi@gmail.com)
+- 📱 Instagram: [@osissmaitfi](https://www.instagram.com/osissmaitfi/)
+- 🌐 Website: [@osissmaitfi website](https://osissmaitfi.github.io/osissmaitfi/)
+- contributed by [@biezz-2](https://github.com/biezz-2)
 
 ## 🤝 Contributing
 
