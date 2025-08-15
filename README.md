@@ -65,7 +65,7 @@ We welcome contributions from all students! Feel free to:
 	OSIS SMAIT FITHRAH INSANI
 </div>
 
-Dibuat otomatis oleh tooling lokal untuk mempercepat setup. Sesuaikan README ini sesuai kebutuhan tim.
+Dibuat otomatis oleh tooling lokal untuk mempercepat setup.
 
 ## Cara upload / push repo ini ke GitHub
 
