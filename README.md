@@ -1,47 +1,74 @@
-# osissmaitfi
-
-Website OSIS SMA IT FTI — kumpulan halaman HTML, gambar, dan aset statis yang digunakan untuk situs organisasi.
-
-Isi utama:
-- `index.html` — halaman depan
-- `about.html`, `people.html`, `our-social-media.html`, `bidang.html` — halaman statis lain
-- folder `about/`, `global/`, `sekbid/` — aset gambar dan halaman sub
-
-Tujuan repository ini:
-- Menyimpan versi situs statis.
-- Memudahkan deployment/hosting (GitHub Pages, hosting statis lain).
-
-Panduan singkat (jika ingin push ke GitHub dari mesin Anda):
-
-1. Pastikan Anda berada di folder proyek:
-
-```powershell
-cd /d J:\bhaskara\bhaskara
-```
-
-2. Inisialisasi git (jika belum):
-
-```powershell
-git init
 git add -A
 git commit -m "Initial commit: add website files, README, LICENSE, .gitignore"
 git branch -M main
 git remote add origin git@github.com:OSISSMAITFI/osissmaitfi.git
 git push -u origin main
-```
+# 🏫 OSIS SMAIT FITHRAH INSANI
 
-Jika push gagal karena autentikasi SSH, lihat bagian "SSH / HTTPS" di bawah.
 
-SSH / HTTPS:
-- Preferred: siapkan kunci SSH dan tambahkan ke GitHub. Lalu gunakan remote `git@github.com:OSISSMAITFI/osissmaitfi.git`.
-- Alternatif: gunakan HTTPS remote `https://github.com/OSISSMAITFI/osissmaitfi.git` dan autentikasi dengan PAT.
+## 📖 About
 
-Lisensi dan .gitignore disediakan di repo ini; sesuaikan bila perlu.
+Welcome to the official repository of OSIS SMAIT Fithrah Insani! This repository serves as a central hub for our organization's digital resources and projects.
 
-Kontak & kolaborator:
-- Untuk menambah kolaborator, buka halaman repo di GitHub -> Settings -> Manage access -> Invite collaborators.
+## 🎯 Vision & Mission
+
+### Vision
+Welcome to the official repository of OSIS SMAIT Fithrah ! This repository serves as a central hub for our organization's digital resources and projects.
+
+### Mission
+- 🌟 Integration of Islamic Values
+- 📚 Discipline & Exemplary
+- 🎨 Potential Development
+
+## 🔧 Structure
+
+- 👑 **Ketua OSIS**
+- 👥 **Wakil Ketua**
+- 📝 **Sekretaris**
+- 💰 **Bendahara**
+- 📋 **Divisi-divisi**
+	- Divisi Keagamaan
+	- Divisi Kedisiplinan
+	- Divisi Pendidikan
+	- Divisi Literasi
+	- Divisi Bakat dan Minat
+	- Divisi Kesehatan
+	- Divisi Kewirausahaan
+	- Divisi Media
+
+## 📅 Programs
+
+- Responsible for religious and spiritual activities at school.
+- Develop a sense of nationalism and patriotism.
+- Educate students to be insightful
+- Educate students in the field of language
+- Developing students' talents and creativity.
+- Bertanggung jawab dalam kebersihan dan kesehatan.
+- Train entrepreneurship and manage funds.
+- Manage OSIS communications and information.
+
+## 📞 Contact
+
+- 📧 Email: [osissmaitfi@gmail.com]
+- 📱 Instagram: [https://www.instagram.com/osissmaitfi/]
+- 🌐 Website: [https://osissmaitfi.biezz.my.id/]
+
+## 🤝 Contributing
+
+We welcome contributions from all students! Feel free to:
+- Submit suggestions for improvement
+- Report issues
+- Participate in our programs
+- Share creative ideas
+
+## ⚖️ License
+
+© 2024 OSIS SMAIT Future Islamic. All Rights Reserved.
 
 ---
+<div align="center">
+	OSIS SMAIT FITHRAH INSANI
+</div>
 
 Dibuat otomatis oleh tooling lokal untuk mempercepat setup. Sesuaikan README ini sesuai kebutuhan tim.
 
