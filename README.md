@@ -1,8 +1,3 @@
-git add -A
-git commit -m "Initial commit: add website files, README, LICENSE, .gitignore"
-git branch -M main
-git remote add origin git@github.com:OSISSMAITFI/osissmaitfi.git
-git push -u origin main
 # 🏫 OSIS SMAIT FITHRAH INSANI
 
 
