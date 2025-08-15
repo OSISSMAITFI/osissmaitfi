@@ -47,6 +47,7 @@ Welcome to the official repository of OSIS SMAIT Fithrah ! This repository serve
 - 📧 Email: [osissmaitfi@gmail.com]
 - 📱 Instagram: [https://www.instagram.com/osissmaitfi/]
 - 🌐 Website: [https://osissmaitfi.biezz.my.id/]
+- contributed by [https://github.com/biezz-2]
 
 ## 🤝 Contributing
 
