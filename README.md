@@ -118,4 +118,4 @@ Menambah collaborator:
 
 ---
 
-Follow-up: jika Anda mau, saya bisa menyiapkan file `.devcontainer` agar repository ini siap dibuka di Codespaces.
+
