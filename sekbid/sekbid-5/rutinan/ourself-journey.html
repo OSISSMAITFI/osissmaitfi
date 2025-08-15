@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Ourself Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                        OJ
+                    </div>
+                    <span class="font-semibold text-gray-900 text-lg">Ourself Journey</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../../../index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="../../../bidang.html" class="text-gray-700 hover:text-blue-600 transition">Programs</a>
+                    <a href="../../../about.html" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="../../sekbid-5/index.html" class="text-gray-700 hover:text-blue-600 transition">Sekbid 5</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none text-xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation Overlay -->
+        <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-blue-900 bg-opacity-95 z-50 flex-col items-center justify-center hidden">
+        <script>
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('mobile-menu-btn');
+            var menu = document.getElementById('mobile-menu');
+            var closeBtn = document.getElementById('close-mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.remove('hidden');
+                });
+            }
+            if(closeBtn && menu) {
+                closeBtn.addEventListener('click', function() {
+                    menu.classList.add('hidden');
+                });
+            }
+            // Optional: tekan ESC untuk menutup
+            document.addEventListener('keydown', function(e) {
+                if(e.key === 'Escape' && menu && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+        </script>
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <a href="../../../index.html" class="text-white text-xl font-semibold hover:text-yellow-300 transition">Home</a>
+                <a href="../../../about.html" class="text-white text-xl font-semibold hover:text-yellow-300 transition">About</a>
+                <a href="../../../bidang.html" class="text-white text-xl font-semibold hover:text-yellow-300 transition">Program</a>
+                <a href="../../sekbid-5/index.html" class="text-white text-xl font-semibold hover:text-yellow-300 transition">Sekbid 5</a>
+                <button id="close-mobile-menu" class="mt-12 text-3xl text-white hover:text-yellow-300 focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </nav>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Ourself Journey</h1>
+                    <p class="text-xl mb-8">Temukan minat dan potensi Anda bersama OSIS SMAIT Fithrah Insani</p>
+                    <a href="#pelaksanaan" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold px-6 py-3 rounded-full shadow-lg transition transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-200 duration-200 inline-block">Pelajari Program</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="./Ourself Journey/2.jpg" 
+                         alt="Students collaborating" 
+                         class="rounded-xl shadow-2xl border-4 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tujuan Section -->
+    <section id="tujuan" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Tujuan Program</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="bg-blue-50 rounded-xl p-8 shadow-md max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-1">
+                        <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                            <i class="fas fa-bullseye text-blue-600 text-xl"></i>
+                        </div>
+                        <p class="text-gray-800 text-lg leading-relaxed">
+                            Program ini diadakan untuk membantu siswa/i SMAIT Fithrah Insani dalam memahami dan menentukan minat serta potensi yang dimiliki. Kami berkomitmen untuk membimbing setiap peserta dalam menemukan jalan mereka menuju masa depan yang cerah.
+                        </p>
+                    </div>
+                    <!-- Foto kosong yang bisa diisi, ukuran sama seperti become-a-star -->
+                    <div class="w-full md:w-96 h-64 rounded-lg flex items-center justify-center overflow-hidden bg-gray-200">
+                        <img src="./Ourself Journey/jasmine.JPG" alt="Foto Program" class="object-cover w-full h-full" id="program-goals-photo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pelaksanaan Section -->
+    <section id="pelaksanaan" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Teknis Pelaksanaan</h2>
+                <div class="w-20 h-1 bg-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Minggu 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="bg-purple-500 p-4 text-white text-center">
+                        <h3 class="font-bold text-xl">Minggu 1</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-video text-purple-600"></i>
+                            </div>
+                            <p class="text-gray-700">Video di Instagram dan TikTok OSIS sesuai tema</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Minggu 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="bg-blue-500 p-4 text-white text-center">
+                        <h3 class="font-bold text-xl">Minggu 2</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-clipboard text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Self Journey Ourboard di Mading Sekolah</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Minggu 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="bg-pink-500 p-4 text-white text-center">
+                        <h3 class="font-bold text-xl">Minggu 3</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-pink-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-broadcast-tower text-pink-600"></i>
+                            </div>
+                            <p class="text-gray-700">Penyiaran materi melalui radio TU seputar minat dan bakat</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Minggu 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="bg-green-500 p-4 text-white text-center">
+                        <h3 class="font-bold text-xl">Minggu 4</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-question-circle text-green-600"></i>
+                            </div>
+                            <p class="text-gray-700">Kuis dan evaluasi program</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dokumentasi Section -->
+    <section id="dokumentasi" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Dokumentasi</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-item overflow-hidden rounded-xl shadow-md">
+                    <img src="./Ourself Journey/1.jpg" 
+                         alt="Dokumentasi 1" 
+                         class="w-full h-64 object-cover hover:opacity-90 transition">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-xl shadow-md">
+                    <img src="./Ourself Journey/2.jpg" 
+                         alt="Dokumentasi 2" 
+                         class="w-full h-64 object-cover hover:opacity-90 transition">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-xl shadow-md">
+                    <img src="./Ourself Journey/3.jpg" 
+                         alt="Dokumentasi 3" 
+                         class="w-full h-64 object-cover hover:opacity-90 transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-guitar mr-2"></i> OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Sekbid 5</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Smooth scroll and button animation
+            var scrollBtn = document.querySelector('a[href="#program"]');
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', function(e) {
+                    var target = document.getElementById('program');
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        scrollBtn.classList.add('scale-95');
+                        setTimeout(function() {
+                            scrollBtn.classList.remove('scale-95');
+                        }, 200);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

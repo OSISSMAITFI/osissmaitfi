@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT Fithrah Insani - Foto Anggota</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-item {
+            transition: all 1.3s ease;
+        }
+
+        .card-img-top {
+            width: 100%;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            padding: 1rem;
+        }
+
+        body {
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #dfbf0d 0%, #FFF8DC 100%);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 99;
+        }
+
+        /* Tombol Lihat Biodata hanya muncul saat hover kartu pengurus */
+        .pengurus-card .biodata-btn {
+            position: absolute;
+            left: 50%;
+            bottom: 24px;
+            transform: translateX(-50%);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            z-index: 2;
+        }
+
+        .pengurus-card:hover .biodata-btn {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .pengurus-card {
+            transition: transform 0.3s ease;
+        }
+
+        .pengurus-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .biodata-btn {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .biodata-btn:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Top Navigation Bar -->
+    <div class="bg-light border-bottom py-2">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="./global/logo.png" alt="Logo OSIS" class="rounded-circle me-2" width="32" height="32">
+                    <span class="fw-bold text-warning">OSIS SMAIT FITHRAH INSANI</span>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-4">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social
+                        Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </div>
+                <div class="d-lg-none">
+                    <button class="btn btn-outline-warning btn-sm" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#topNavCollapse">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Top Navigation -->
+            <div class="collapse mt-2" id="topNavCollapse">
+                <div class="d-flex flex-column gap-2">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social
+                        Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Foto Anggota OSIS
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Ketua OSIS Section -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark">Ketua OSIS</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Pemimpin organisasi siswa yang memimpin dengan visi dan dedikasi tinggi.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center position-relative pengurus-card">
+                        <img src="about/ke-2.png" class="card-img-top" alt="Ketua OSIS">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Muhammad Hafidz Azzamulhaq</h5>
+                            <p class="text-primary fw-medium">Ketua OSIS</p>
+                            <p class="card-text text-muted small">Memimpin organisasi dengan visi dan dedikasi yang tinggi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengurus Inti Section -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark">Pengurus Inti OSIS</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Para siswa berdedikasi yang membuat OSIS SMAIT FITHRAH INSANI menjadi mungkin.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center position-relative pengurus-card">
+                        <img src="about/ke-5.png" class="card-img-top" alt="Wakil Ketua OSIS">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Nooraisha Tiara Putri</h5>
+                            <p class="text-primary fw-medium">Wakil Ketua OSIS</p>
+                            <p class="card-text text-muted small">Mendukung ketua dalam semua urusan organisasi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center position-relative pengurus-card">
+                        <img src="about/ke-6.png" class="card-img-top" alt="Sekretaris OSIS">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">I'tisyam Ariqoh Shafa</h5>
+                            <p class="text-primary fw-medium">Sekretaris OSIS</p>
+                            <p class="card-text text-muted small">Menjaga catatan dan memastikan komunikasi yang lancar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center position-relative pengurus-card">
+                        <img src="about/ke-4.png" class="card-img-top" alt="Bendahara OSIS">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Rahma Ayuna Nurul Haq</h5>
+                            <p class="text-primary fw-medium">Bendahara OSIS</p>
+                            <p class="card-text text-muted small">Mengelola keuangan dan anggaran untuk semua kegiatan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kepala Departemen Section -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark">Kepala Departemen</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Para pemimpin departemen yang bertanggung jawab atas berbagai seksi bidang.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-7.png" class="card-img-top" alt="Kepala Departemen A">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Farras Yusra Juneeta</h6>
+                            <p class="text-primary fw-medium">Kepala Departemen A</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 1 dan Sekbid 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-9.png" class="card-img-top" alt="Kepala Departemen B">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Adiba Alya Batrisya</h6>
+                            <p class="text-primary fw-medium">Kepala Departemen B</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 3 dan Sekbid 4.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-10.png" class="card-img-top" alt="Kepala Departemen C">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Mochammad Kafka Reznia Avicena</h6>
+                            <p class="text-primary fw-medium">Kepala Departemen C</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 5 dan Sekbid 6.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-12.png" class="card-img-top" alt="Kepala Departemen D">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Adnan Humam Alfadz</h6>
+                            <p class="text-primary fw-medium">Kepala Departemen D</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 7 dan Sekbid 8.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anggota Seksi Bidang Section -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark">Anggota Seksi Bidang</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Para anggota yang bertanggung jawab dalam berbagai bidang kegiatan sekolah.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-13.png" class="card-img-top" alt="Anggota Sekbid 1">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 1</h6>
+                            <p class="text-primary fw-medium">Keagamaan</p>
+                            <p class="card-text text-muted small">Mengkoordinir kegiatan keagamaan di sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-14.png" class="card-img-top" alt="Anggota Sekbid 2">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 2</h6>
+                            <p class="text-primary fw-medium">Kedisiplinan</p>
+                            <p class="card-text text-muted small">Menjaga kedisiplinan dan tata tertib sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-15.png" class="card-img-top" alt="Anggota Sekbid 3">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 3</h6>
+                            <p class="text-primary fw-medium">Pendidikan</p>
+                            <p class="card-text text-muted small">Mengembangkan program pendidikan siswa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-16.png" class="card-img-top" alt="Anggota Sekbid 4">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 4</h6>
+                            <p class="text-primary fw-medium">Literasi</p>
+                            <p class="card-text text-muted small">Meningkatkan budaya literasi di sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-18.png" class="card-img-top" alt="Anggota Sekbid 5">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 5</h6>
+                            <p class="text-primary fw-medium">Bakat & Minat</p>
+                            <p class="card-text text-muted small">Mengembangkan bakat dan minat siswa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-19.png" class="card-img-top" alt="Anggota Sekbid 6">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 6</h6>
+                            <p class="text-primary fw-medium">Kesehatan</p>
+                            <p class="card-text text-muted small">Menjaga kesehatan dan kebersihan sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-20.png" class="card-img-top" alt="Anggota Sekbid 7">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 7</h6>
+                            <p class="text-primary fw-medium">Kewirausahaan</p>
+                            <p class="card-text text-muted small">Mengembangkan jiwa kewirausahaan siswa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <img src="about/ke-21.png" class="card-img-top" alt="Anggota Sekbid 8">
+                        <div class="card-body">
+                            <h6 class="card-title fw-semibold">Sekbid 8</h6>
+                            <p class="text-primary fw-medium">Media</p>
+                            <p class="card-text text-muted small">Mengelola media dan publikasi sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h5 class="fw-bold mb-3">OSIS SMAIT FITHRAH INSANI</h5>
+                    <p class="text-light opacity-75 mb-3">Bhaskara 2025 - Bermanfaat bersama, bersinar selamanya</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com/osissmaitfi/" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi?lang=id-ID" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./index.html"
+                                class="text-light opacity-75 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="./about.html" class="text-light opacity-75 text-decoration-none">About
+                                Us</a></li>
+                        <li class="mb-2"><a href="./bidang.html"
+                                class="text-light opacity-75 text-decoration-none">Program Kerja</a></li>
+                        <li class="mb-2"><a href="./our-social-media.html"
+                                class="text-light opacity-75 text-decoration-none">Social Media</a></li>
+                        <li class="mb-2"><a href="./people.html" class="text-light opacity-75 text-decoration-none">Foto
+                                Anggota</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Contact Us</h6>
+                    <div class="d-flex mb-2">
+                        <i class="fas fa-map-marker-alt text-warning me-2 mt-1"></i>
+                        <span class="text-light opacity-75 small">SMAIT Fithrah Insani, Jl. H. Gofur No. 10 Tanimulya,
+                            Ngamprah, Kab. Bandung Barat</span>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fas fa-phone text-warning me-2"></i>
+                        <span class="text-light opacity-75 small">(022) 87805564</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+            <div class="text-center">
+                <p class="mb-0 text-light opacity-50">&copy; 2025 OSIS SMAIT Fithrah Insani - Bhaskara. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navigation active state management
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current page name
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to current page nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Add accessibility improvements
+            document.querySelectorAll('a[href*="instagram"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on Instagram');
+                link.setAttribute('aria-label', 'Follow us on Instagram');
+            });
+
+            document.querySelectorAll('a[href*="youtube"]').forEach(link => {
+                link.setAttribute('title', 'Subscribe to our YouTube channel');
+                link.setAttribute('aria-label', 'Subscribe to our YouTube channel');
+            });
+
+            document.querySelectorAll('a[href*="tiktok"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on TikTok');
+                link.setAttribute('aria-label', 'Follow us on TikTok');
+            });
+
+            document.querySelectorAll('a[href*="spotify"]').forEach(link => {
+                link.setAttribute('title', 'Listen to our Spotify podcast');
+                link.setAttribute('aria-label', 'Listen to our Spotify podcast');
+            });
+
+            // Add hover effects to cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Count Up Animation for Social Media Stats
+            const counters = document.querySelectorAll('.count');
+            counters.forEach(counter => {
+                const update = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const current = +counter.innerText;
+                    const speed = 200;
+                    const increment = target / speed;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(update, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                update();
+            });
+        });
+
+        // Ripple effect for Explore button
+        const exploreBtn = document.getElementById('explore-btn');
+        if (exploreBtn) {
+            exploreBtn.addEventListener('click', function (e) {
+                // Ripple
+                const circle = document.createElement('span');
+                const diameter = Math.max(this.clientWidth, this.clientHeight);
+                const radius = diameter / 2;
+                circle.style.width = circle.style.height = `${diameter}px`;
+                circle.style.left = `${e.clientX - this.getBoundingClientRect().left - radius}px`;
+                circle.style.top = `${e.clientY - this.getBoundingClientRect().top - radius}px`;
+                circle.classList.add('ripple');
+                this.appendChild(circle);
+                setTimeout(() => circle.remove(), 600);
+                // Smooth scroll
+                e.preventDefault();
+                const target = document.getElementById('vision');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

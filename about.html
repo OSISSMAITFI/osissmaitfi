@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-item {
+            transition: all 1.3s ease;
+        }
+        body {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }   
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #dfbf0d 0%, #FFF8DC 100%);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section h1 {
+            color: #333;  /* Darker text color for better contrast */
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1280px; /* max-w-7xl equivalent */
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        /* Add improved mobile menu styling */
+        #topNavCollapse {
+            transform-origin: top;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 1;
+        }
+        
+        #topNavCollapse.collapse:not(.show) {
+            display: block;
+            transform: scaleY(0);
+            opacity: 0;
+        }
+        
+        #topNavCollapse.collapsing {
+            transform: scaleY(0);
+            opacity: 0;
+        }
+        
+        #topNavCollapse.show {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        @media (max-width: 991.98px) {
+            #topNavCollapse {
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                padding: 1rem;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }
+        }
+
+        .photo-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .biodata-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border: 2px solid #007bff;
+            border-radius: 50%;
+            padding: 14px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .photo-container:hover .biodata-btn {
+            opacity: 1 !important;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .biodata-btn:hover {
+            background: #007bff;
+        }
+
+        .biodata-btn:hover i {
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Navigation Bar -->
+    <div class="bg-light border-bottom py-2">
+        <div class="container position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="./global/logo.png" alt="Logo OSIS" class="rounded-circle me-2" width="32" height="32">
+                    <span class="fw-bold text-warning">OSIS SMAIT FITHRAH INSANI</span>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-4">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </div>
+                <div class="d-lg-none">
+                    <button class="btn btn-outline-warning btn-sm" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#topNavCollapse"
+                            aria-expanded="false"
+                            aria-controls="topNavCollapse"
+                            aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Top Navigation -->
+            <div class="collapse mt-2" id="topNavCollapse">
+                <nav class="d-flex flex-column gap-2">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-container">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                About Us
+            </h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- About Section -->
+        <section class="mb-5">
+            <div class="card shadow-lg border-0 mb-4">
+                <div class="card-body p-4 p-md-5">
+                    <h2 class="card-title h3 fw-bold text-primary mb-4">Nama OSIS Bhaskara</h2>
+                    <p class="card-text text-muted mb-4">
+                        Ketua OSIS periode 2024–2025 memperkenalkan nama OSIS periode ini, yaitu BHASKARA, yang berasal dari bahasa Sanskerta dan berarti "matahari". Nama ini dipilih karena melambangkan cahaya dan manfaat yang ingin diberikan OSIS kepada seluruh siswa. Selain itu, "Bhaskara" merupakan singkatan dari Bimantara dan Sanskara, menjadikannya simbolik sebagai "anak" dan "cucu" dari nama-nama sebelumnya. Harapannya, OSIS Bhaskara dapat menjadi penerang dan pembawa kebaikan bagi seluruh siswa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow-lg border-0">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="./global/logo.png" class="img-fluid h-100 object-fit-cover" alt="OSIS Team">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="card-title h3 fw-bold text-primary mb-4">Makna Simbol OSIS SMA IT Fithrah Insani</h2>
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded">
+                                            <i class="fas fa-circle text-primary fs-4"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="fw-semibold text-dark">Lingkaran</h5>
+                                            <p class="text-muted small mb-0">
+                                                Melambangkan bahwa OSIS SMA IT Fithrah Insani terus bergenerasi dan tidak pernah terputus estafet kepemimpinannya.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded">
+                                            <i class="fas fa-arrows-alt-h text-primary fs-4"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="fw-semibold text-dark">Garis yang Tidak Menyambung</h5>
+                                            <p class="text-muted small mb-0">
+                                                Menunjukkan bahwa meskipun OSIS terdiri dari ikhwan dan akhwat, tetap menjaga batasan dan menjaga jarak sesuai syariat.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 bg-dark bg-opacity-10 p-3 rounded">
+                                            <i class="fas fa-circle text-dark fs-4"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="fw-semibold text-dark">Warna Hitam</h5>
+                                            <p class="text-muted small mb-0">
+                                                Simbol keberanian dan rasa percaya diri yang selalu dimiliki oleh OSIS SMA IT Fithrah Insani.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded">
+                                            <i class="fas fa-minus text-warning fs-4"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="fw-semibold text-dark">Garis-Garis Warna Emas</h5>
+                                            <p class="text-muted small mb-0">
+                                                Menandakan bahwa setiap generasi OSIS selalu berprestasi dan membawa pencapaian yang membanggakan.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 bg-dark bg-opacity-10 p-3 rounded">
+                                            <i class="fas fa-ellipsis-h text-dark fs-4"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="fw-semibold text-dark">Empat Titik</h5>
+                                            <p class="text-muted small mb-0">
+                                                Melambangkan struktur inti OSIS yang terdiri dari empat anggota utama sebagai pemimpin organisasi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded">
+                                            <i class="fas fa-building text-primary fs-4"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="fw-semibold text-dark">Logo FI</h5>
+                                            <p class="text-muted small mb-0">
+                                                Menunjukkan bahwa OSIS SMA IT Fithrah Insani berada di bawah naungan Sekolah Islam Terpadu Fithrah Insani.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded">
+                                            <i class="fas fa-book-quran text-primary fs-4"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="fw-semibold text-dark">Al-Qur'an</h5>
+                                            <p class="text-muted small mb-0">
+                                                Menjadi dasar dan landasan dari setiap program kerja OSIS, sesuai dengan nilai-nilai Islam yang dijunjung.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ 
+                    </div>
+                </div>
+            </div>
+         <!--akhir our activities-->
+
+        <!-- Modals for Team Members -->
+    <!-- Modal Ketua OSIS -->
+    <div class="modal fade" id="hafidzModal" tabindex="-1" aria-labelledby="hafidzModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hafidzModalLabel">Muhammad Hafidz Azzamulhaq</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/KO.JPG" alt="Muhammad Hafidz Azzamulhaq" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Ketua OSIS</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>Muhammad Hafidz Azzamulhaq</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Cimahi, 17 Oktober 2007</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Bukit Rahmah Permai Blok D 26</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"No Retreat"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Wakil Ketua OSIS -->
+    <div class="modal fade" id="tiaraModal" tabindex="-1" aria-labelledby="tiaraModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tiaraModalLabel">Nooraisha Tiara Putri</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/WKO.JPG" alt="Nooraisha Tiara Putri" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Wakil Ketua OSIS</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>Noorraisha Tiara Putri</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Bandung, 1 Maret 2008</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Bukit Cipageran Indah</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"One day or day one"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sekretaris OSIS -->
+    <div class="modal fade" id="shafaModal" tabindex="-1" aria-labelledby="shafaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="shafaModalLabel">I'tisyam Ariqoh Shafa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/SKTO.JPG" alt="I'tisyam Ariqoh Shafa" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Sekretaris OSIS</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>I'tisyam Ariqoh Shafa</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Sukoharjo, 12 Februari 2008</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Royal Orchid Villa</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"Sebaik-baiknya manusia adalah yang bermanfaat😉"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bendahara OSIS -->
+    <div class="modal fade" id="rahmaModal" tabindex="-1" aria-labelledby="rahmaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rahmaModalLabel">Rahma Ayuna Nurul Haq</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/BDHRO.JPG" alt="Rahma Ayuna Nurul Haq" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Bendahara OSIS</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>Rahma Ayuna Nurul Haq</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Bandung, 16 September 2008</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Jl. Ciung Wanara</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"The best view comes after the hardest climbing"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark">Pengurus Inti OSIS</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Para siswa berdedikasi yang membuat OSIS SMAIT FITHRAH INSANI menjadi mungkin.
+                </p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/KO.JPG" class="card-img-top" alt="Muhammad Hafidz Azzamulhaq" style="height:100%;object-fit:cover;" data-bs-toggle="modal" data-bs-target="#hafidzModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#hafidzModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Muhammad Hafidz Azzamulhaq</h5>
+                            <p class="text-primary fw-medium">Ketua OSIS</p>
+                            <p class="card-text text-muted small">Memimpin organisasi dengan visi dan dedikasi yang tinggi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/WKO.JPG" class="card-img-top" alt="Nooraisha Tiara Putri" style="height:100%;object-fit:cover;" data-bs-toggle="modal" data-bs-target="#tiaraModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#tiaraModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Nooraisha Tiara Putri</h5>
+                            <p class="text-primary fw-medium">Wakil Ketua OSIS</p>
+                            <p class="card-text text-muted small">Mendukung ketua dalam semua urusan organisasi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/SKTO.JPG" class="card-img-top" alt="I'tisyam Ariqoh Shafa" style="height:100%;object-fit:cover;" data-bs-toggle="modal" data-bs-target="#shafaModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#shafaModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">I'tisyam Ariqoh Shafa</h5>
+                            <p class="text-primary fw-medium">Sekretaris OSIS</p>
+                            <p class="card-text text-muted small">Menjaga catatan dan memastikan komunikasi yang lancar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/BDHRO.JPG" class="card-img-top" alt="Rahma Ayuna Nurul Haq" style="height:100%;object-fit:cover;" data-bs-toggle="modal" data-bs-target="#rahmaModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#rahmaModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Rahma Ayuna Nurul Haq</h5>
+                            <p class="text-primary fw-medium">Bendahara OSIS</p>
+                            <p class="card-text text-muted small">Mengelola keuangan dan anggaran untuk semua kegiatan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kepala Departemen Section -->
+        <section class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark">Kepala Departemen</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Para pemimpin departemen yang bertanggung jawab atas berbagai seksi bidang.
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Kepala Departemen -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/farras.JPG" class="card-img-top" alt="Farras Yusra Juneeta" style="height: 300px; object-fit: cover; object-position: top;" data-bs-toggle="modal" data-bs-target="#farrasModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#farrasModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Farras Yusra Juneeta</h5>
+                            <p class="text-primary fw-medium">Kepala Departemen A</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 1 dan Sekbid 2.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/adiba.JPG" class="card-img-top" alt="Adiba Alya Batrisya" style="height: 300px; object-fit: cover;" data-bs-toggle="modal" data-bs-target="#adibaModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#adibaModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Adiba Alya Batrisya</h5>
+                            <p class="text-primary fw-medium">Kepala Departemen B</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 3 dan Sekbid 4.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/kafka.JPG" class="card-img-top" alt="Mochammad Kafka Reznia Avicena" style="height: 300px; object-fit: cover;" data-bs-toggle="modal" data-bs-target="#kafkaModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#kafkaModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Mochammad Kafka Reznia Avicena</h5>
+                            <p class="text-primary fw-medium">Kepala Departemen C</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 5 dan Sekbid 6.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-center">
+                        <div class="photo-container">
+                            <img src="./Inti & Kadep/adnan.JPG" class="card-img-top" alt="Adnan Humam Alfadz" style="height: 300px; object-fit: cover;" data-bs-toggle="modal" data-bs-target="#adnanModal">
+                            <button class="biodata-btn" data-bs-toggle="modal" data-bs-target="#adnanModal">
+                                <i class="fas fa-user-tie text-primary" style="font-size: 24px;"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Adnan Humam Alfadz</h5>
+                            <p class="text-primary fw-medium">Kepala Departemen D</p>
+                            <p class="card-text text-muted small">Penanggung Jawab Sekbid 7 dan Sekbid 8.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+ 
+    <!-- Modals for Kepala Departemen -->
+    <!-- Modal Farras -->
+    <div class="modal fade" id="farrasModal" tabindex="-1" aria-labelledby="farrasModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="farrasModalLabel">Farras Yusra Juneeta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/farras.JPG" alt="Farras Yusra Juneeta" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Kepala Departemen A</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>Farras Yusra Juneeta</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Bandung, 09 Januari 2008</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Jalan Cimareme</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"Live as if today is your last day"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Adiba -->
+    <div class="modal fade" id="adibaModal" tabindex="-1" aria-labelledby="adibaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adibaModalLabel">Adiba Alya Batrisya</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/adiba.JPG" alt="Adiba Alya Batrisya" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Kepala Departemen B</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>Adiba Alya Batrisya</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Bandung, 3 September 2007</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Jln Karya Bakti</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"Kalau mereka bisa, aku juga pasti bisa"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Kafka -->
+    <div class="modal fade" id="kafkaModal" tabindex="-1" aria-labelledby="kafkaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="kafkaModalLabel">Mochammad Kafka Reznia Avicena</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/kafka.JPG" alt="Mochammad Kafka Reznia Avicena" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Kepala Departemen C</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>Mochamad Kafka Reznia Avicena</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Cimahi, 27 Februari 2008</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Komplek Pemda Padasuka</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"Let your calm hide the storm"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Adnan -->
+    <div class="modal fade" id="adnanModal" tabindex="-1" aria-labelledby="adnanModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="adnanModalLabel">Adnan Humam Alfadz</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./Inti & Kadep/adnan.JPG" alt="Adnan Humam Alfadz" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <h6 class="fw-bold text-primary">Kepala Departemen D</h6>
+                    <div class="mt-3">
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Nama</span>
+                            <span class="mx-2">:</span>
+                            <span>Adnan Humam Alfadz</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">TTL</span>
+                            <span class="mx-2">:</span>
+                            <span>Cimahi, 2 November 2007</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Alamat</span>
+                            <span class="mx-2">:</span>
+                            <span>Perumahan Pondok Ciptamas 2</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="fw-bold" style="width: 140px;">Motto</span>
+                            <span class="mx-2">:</span>
+                            <span>"Hidup tanpa uang akan bahagia? Uang lah yang akan membeli kebahagiaan"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h5 class="fw-bold mb-3">OSIS SMAIT FITHRAH INSANI</h5>
+                    <p class="text-light opacity-75 mb-3">Bhaskara 2025 - Bermanfaat bersama, bersinar selamanya</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com/osissmaitfi/" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi?lang=id-ID" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./index.html"
+                                class="text-light opacity-75 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="./about.html" class="text-light opacity-75 text-decoration-none">About
+                                Us</a></li>
+                        <li class="mb-2"><a href="./bidang.html"
+                                class="text-light opacity-75 text-decoration-none">Program Kerja</a></li>
+                        <li class="mb-2"><a href="./our-social-media.html"
+                                class="text-light opacity-75 text-decoration-none">Social Media</a></li>
+                        <li class="mb-2"><a href="./people.html" class="text-light opacity-75 text-decoration-none">Foto
+                                Anggota</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Contact Us</h6>
+                    <div class="d-flex mb-2">
+                        <i class="fas fa-map-marker-alt text-warning me-2 mt-1"></i>
+                        <span class="text-light opacity-75 small">SMAIT Fithrah Insani, Jl. H. Gofur No. 10 Tanimulya,
+                            Ngamprah, Kab. Bandung Barat</span>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fas fa-phone text-warning me-2"></i>
+                        <span class="text-light opacity-75 small">(022) 87805564</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+            <div class="text-center">
+                <p class="mb-0 text-light opacity-50">&copy; 2025 OSIS SMAIT Fithrah Insani - Bhaskara. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navigation active state management
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current page name
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to current page nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Add accessibility improvements
+            document.querySelectorAll('a[href*="instagram"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on Instagram');
+                link.setAttribute('aria-label', 'Follow us on Instagram');
+            });
+
+            document.querySelectorAll('a[href*="youtube"]').forEach(link => {
+                link.setAttribute('title', 'Subscribe to our YouTube channel');
+                link.setAttribute('aria-label', 'Subscribe to our YouTube channel');
+            });
+
+            document.querySelectorAll('a[href*="tiktok"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on TikTok');
+                link.setAttribute('aria-label', 'Follow us on TikTok');
+            });
+
+            document.querySelectorAll('a[href*="spotify"]').forEach(link => {
+                link.setAttribute('title', 'Listen to our Spotify podcast');
+                link.setAttribute('aria-label', 'Listen to our Spotify podcast');
+            });
+
+            // Add hover effects to cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Count Up Animation for Social Media Stats
+            const counters = document.querySelectorAll('.count');
+            counters.forEach(counter => {
+                const update = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const current = +counter.innerText;
+                    const speed = 200;
+                    const increment = target / speed;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(update, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                update();
+            });
+        });
+
+        // Ripple effect for Explore button
+        const exploreBtn = document.getElementById('explore-btn');
+        if (exploreBtn) {
+            exploreBtn.addEventListener('click', function (e) {
+                // Ripple
+                const circle = document.createElement('span');
+                const diameter = Math.max(this.clientWidth, this.clientHeight);
+                const radius = diameter / 2;
+                circle.style.width = circle.style.height = `${diameter}px`;
+                circle.style.left = `${e.clientX - this.getBoundingClientRect().left - radius}px`;
+                circle.style.top = `${e.clientY - this.getBoundingClientRect().top - radius}px`;
+                circle.classList.add('ripple');
+                this.appendChild(circle);
+                setTimeout(() => circle.remove(), 600);
+                // Smooth scroll
+                e.preventDefault();
+                const target = document.getElementById('vision');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

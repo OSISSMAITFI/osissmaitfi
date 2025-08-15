@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Piket Kedisiplinan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-school text-red-600 text-2xl"></i>
+                <span class="text-xl font-bold text-red-600">SMAIT FITHRAH INSANI</span>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i> 
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="../../../index" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="../../../about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="../../../bidang.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Program</a>
+                <a href="../../sekbid-2/index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Sekbid 2</a>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4">
+            <a href="../../../index.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
+            <a href="../../../about.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
+            <a href="../../../bidang.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Program</a>
+            <a href="../../sekbid-2/index.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Sekbid 2</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-red-600 text-white py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center animate-fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Piket Kedisiplinan</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Membangun budaya disiplin untuk menciptakan lingkungan belajar yang kondusif</p>
+            <div class="mt-8">
+                <a href="#tujuan" class="bg-white text-red-600 px-6 py-3 rounded-full font-medium inline-block mr-4 hover:bg-gray-100 transition">Tujuan</a>
+                <a href="#dokumentasi" class="border-2 border-white text-white px-6 py-3 rounded-full font-medium inline-block hover:bg-white hover:text-red-600 transition">Dokumentasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Tujuan Section -->
+        <section id="tujuan" class="mb-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Tujuan Program</h2>
+                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover transition">
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-bullseye text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Menertibkan Siswa</h3>
+                                <p class="text-gray-600">Membantu menertibkan siswa/i terkait peraturan yang sudah ditentukan oleh sekolah.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-user-graduate text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Melatih Kedisiplinan</h3>
+                                <p class="text-gray-600">Melatih kedisiplinan dalam menaati peraturan sekolah untuk membentuk karakter yang baik.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ganti bagian gambar di bawah ini -->
+                <div class="md:w-2/3 md:pr-0 mb-6 md:mb-0 flex-shrink-0">
+                    <img src="./piket-kedisiplian/rayhan.JPG" alt="Tujuan Program" class="w-full h-auto rounded-lg object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknis Pelaksanaan Section -->
+        <section class="mb-16 bg-blue-50 rounded-2xl p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Teknis Pelaksanaan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Waktu Pelaksanaan</h3>
+                    <p class="text-gray-600">Dilaksanakan setiap hari dari jam 06.20 sampai 07.20 pagi.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-clipboard-check text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Pemeriksaan Atribut</h3>
+                    <p class="text-gray-600">Memeriksa kelengkapan atribut setiap siswa/i sesuai peraturan sekolah.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-clock text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Penanganan Keterlambatan</h3>
+                    <p class="text-gray-600">Menangani siswa/i yang datang terlambat sesuai dengan prosedur yang berlaku.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dokumentasi Section -->
+        <section id="dokumentasi" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Dokumentasi Kegiatan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="./piket-kedisiplian/ke-1.png" alt="Dokumentasi 1" class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <p class="text-gray-600">Siswa sedang diperiksa atributnya oleh petugas piket</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="./piket-kedisiplian/ke-2.png" alt="Dokumentasi 2" class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <p class="text-gray-600">Petugas piket sedang mencatat siswa yang terlambat</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="./piket-kedisiplian/ke-3.png" alt="Dokumentasi 3" class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <p class="text-gray-600">Koordinasi petugas piket sebelum memulai tugas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+    </main>
+
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-school mr-2"></i> OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../../sekbid-2/index.html" class="text-gray-400 hover:text-white">Sekbid 2</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Program Kerja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        nav {
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        body {
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Custom button styles for btn-detail */
+        .btn-detail {
+            display: inline-block;
+            margin-top: 0;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #e60000;
+            border: 1.5px solid #e60000;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            font-weight: 500;
+            background-color: transparent;
+            transition: all 0.3s ease;
+            line-height: 1.5;
+        }
+
+        .btn-detail:hover {
+            color: white;
+            background-color: #e60000;
+            border-color: #e60000;
+        }
+
+        /* Custom button styles for btn-detail-green */
+        .btn-detail-green {
+            display: inline-block;
+            margin-top: 0;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #07b04b;
+            border: 1.5px solid #07b04b;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            font-weight: 500;
+            background-color: transparent;
+            transition: all 0.3s ease;
+            line-height: 1.5;
+        }
+
+        .btn-detail-green:hover {
+            color: white;
+            background-color: #07b04b;
+            border-color: #07b04b;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <!-- Top Navigation Bar -->
+    <div class="bg-light border-bottom py-2">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="./global/logo.png" alt="Logo OSIS" class="rounded-circle me-2" width="32" height="32">
+                    <span class="fw-bold text-warning">OSIS SMAIT FITHRAH INSANI</span>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-4">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </div>
+                <div class="d-lg-none">
+                    <button class="btn btn-outline-warning btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#topNavCollapse">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Top Navigation -->
+            <div class="collapse mt-2" id="topNavCollapse">
+                <div class="d-flex flex-column gap-2">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="text-white py-5" style="background: linear-gradient(90deg, #e0bc06 0%, #FFF8DC 100%);">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Program Kerja OSIS</h1>
+            <p class="lead">SMAIT Fithrah Insani - Bhaskara 2025</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="h3 fw-bold text-dark mb-3">8 Seksi Bidang OSIS</h2>
+            <p class="text-muted mx-auto" style="max-width: 800px;">
+                Berikut adalah daftar bidang dan seksi yang ada dalam struktur OSIS kami.
+                Setiap bidang memiliki tanggung jawab dan program kerja masing-masing.
+            </p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <!-- Bidang 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header bg-primary text-white py-4">
+                        <i class="fas fa-mosque fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 1</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Bertanggung jawab atas kegiatan keagamaan dan kerohanian di
+                            sekolah.</p>
+                        <a href="./sekbid/sekbid-1/index.html" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bidang 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header bg-red-600 text-white py-4">
+                        <i class="fas fa-school fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 2</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Mengembangkan rasa nasionalisme dan patriotisme.
+                            </p>
+                        <a href="./sekbid/sekbid-2/index.html" class="btn btn-detail btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bidang 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header bg-warning text-white py-4">
+                        <i class="fas fa-images fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 3</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Mengedukasi siswa untuk berwawasan</p>
+                        <a href="./sekbid/sekbid-3/index.html" class="btn btn-outline-warning btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bidang 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header bg-green-600 text-white py-4">
+                        <i class="fas fa-book fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 4</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Mengedukasi siswa dalam bidang bahasa</p>
+                        <a href="./sekbid/sekbid-4/index.html" class="btn btn-detail-green btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Bidang 5 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header bg-secondary text-white py-4">
+                        <i class="fas fa-guitar fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 5</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Mengembangkan bakat dan kreativitas siswa.</p>
+                        <a href="./sekbid/sekbid-5/index.html" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bidang 6 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header bg-info text-white py-4">
+                        <i class="fas fa-broom fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 6</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Bertanggung jawab dalam kebersihan dan kesehatan.</p>
+                        <a href="./sekbid/sekbid-6/index.html" class="btn btn-outline-info btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bidang 7 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header bg-dark text-white py-4">
+                        <i class="fas fa-money-bill-wave fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 7</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Melatih kewirausahaan dan mengelola dana.</p>
+                        <a href="./sekbid/sekbid-7/sekbid-7.html" class="btn btn-outline-dark btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bidang 8 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="card-header text-white py-4"
+                        style="background: linear-gradient(45deg, #20c997, #0dcaf0);">
+                        <i class="fas fa-camera-retro fa-3x mb-3"></i>
+                        <h5 class="card-title fw-bold mb-0">Seksi Bidang 8</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted mb-3">Mengelola komunikasi dan informasi OSIS.</p>
+                        <a href="./sekbid/sekbid-8/index.html" class="btn btn-outline-info btn-sm">
+                            <i class="fas fa-arrow-right me-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="text-center mt-5">
+            <h5 class="fw-semibold mb-3">Follow Us</h5>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.instagram.com/osissmaitfi/" class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-instagram me-1"></i> Instagram
+                </a>
+                <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="btn btn-outline-success btn-sm">
+                    <i class="fab fa-spotify me-1"></i> Spotify
+                </a>
+                <a href="https://www.tiktok.com/@osissmaitfi?lang=id-ID" class="btn btn-outline-dark btn-sm">
+                    <i class="fab fa-tiktok me-1"></i> TikTok
+                </a>
+                <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="btn btn-outline-danger btn-sm">
+                    <i class="fab fa-youtube me-1"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h5 class="fw-bold mb-3">OSIS SMAIT FITHRAH INSANI</h5>
+                    <p class="text-light opacity-75 mb-3">Bhaskara 2025 - Bermanfaat bersama, bersinar selamanya</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com/osissmaitfi/" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi?lang=id-ID" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./index.html"
+                                class="text-light opacity-75 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="./about.html" class="text-light opacity-75 text-decoration-none">About
+                                Us</a></li>
+                        <li class="mb-2"><a href="./bidang.html"
+                                class="text-light opacity-75 text-decoration-none">Program Kerja</a></li>
+                        <li class="mb-2"><a href="./our-social-media.html"
+                                class="text-light opacity-75 text-decoration-none">Social Media</a></li>
+                        <li class="mb-2"><a href="./people.html" class="text-light opacity-75 text-decoration-none">Foto
+                                Anggota</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Contact Us</h6>
+                    <div class="d-flex mb-2">
+                        <i class="fas fa-map-marker-alt text-warning me-2 mt-1"></i>
+                        <span class="text-light opacity-75 small">SMAIT Fithrah Insani, Jl. H. Gofur No. 10 Tanimulya,
+                            Ngamprah, Kab. Bandung Barat</span>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fas fa-phone text-warning me-2"></i>
+                        <span class="text-light opacity-75 small">(022) 87805564</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+            <div class="text-center">
+                <p class="mb-0 text-light opacity-50">&copy; 2025 OSIS SMAIT Fithrah Insani - Bhaskara. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navigation active state management
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current page name
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to current page nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Add accessibility improvements
+            document.querySelectorAll('a[href*="instagram"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on Instagram');
+                link.setAttribute('aria-label', 'Follow us on Instagram');
+            });
+
+            document.querySelectorAll('a[href*="youtube"]').forEach(link => {
+                link.setAttribute('title', 'Subscribe to our YouTube channel');
+                link.setAttribute('aria-label', 'Subscribe to our YouTube channel');
+            });
+
+            document.querySelectorAll('a[href*="tiktok"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on TikTok');
+                link.setAttribute('aria-label', 'Follow us on TikTok');
+            });
+
+            document.querySelectorAll('a[href*="spotify"]').forEach(link => {
+                link.setAttribute('title', 'Listen to our Spotify podcast');
+                link.setAttribute('aria-label', 'Listen to our Spotify podcast');
+            });
+
+            // Add hover effects to cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Count Up Animation for Social Media Stats
+            const counters = document.querySelectorAll('.count');
+            counters.forEach(counter => {
+                const update = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const current = +counter.innerText;
+                    const speed = 200;
+                    const increment = target / speed;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(update, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                update();
+            });
+        });
+
+        // Ripple effect for Explore button
+        const exploreBtn = document.getElementById('explore-btn');
+        if (exploreBtn) {
+            exploreBtn.addEventListener('click', function (e) {
+                // Ripple
+                const circle = document.createElement('span');
+                const diameter = Math.max(this.clientWidth, this.clientHeight);
+                const radius = diameter / 2;
+                circle.style.width = circle.style.height = `${diameter}px`;
+                circle.style.left = `${e.clientX - this.getBoundingClientRect().left - radius}px`;
+                circle.style.top = `${e.clientY - this.getBoundingClientRect().top - radius}px`;
+                circle.classList.add('ripple');
+                this.appendChild(circle);
+                setTimeout(() => circle.remove(), 600);
+                // Smooth scroll
+                e.preventDefault();
+                const target = document.getElementById('vision');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

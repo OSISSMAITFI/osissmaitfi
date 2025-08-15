@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Idul Fitri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-pattern {
+            background-image: url('https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .img-animate {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+        }
+        .img-animate.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .col-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+        }
+        .col-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-green-900 bg-opacity-90 text-white sticky top-0 z-50 shadow">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
+            <div class="flex items-center gap-3 mb-4 md:mb-0">
+                <img src="../../../global/logo.png" alt="OSIS Logo" class="h-12 w-12 rounded-full border-2 border-white">
+                <span class="text-xl md:text-2xl font-bold">OSIS SMAIT FITHRAH INSANI</span>
+            </div>
+            <div class="flex gap-4 md:gap-8 text-green-100 font-semibold">
+                <a href="../../../index.html" class="hover:text-green-300 transition">Home</a>
+                <a href="../../../about.html" class="hover:text-green-300 transition">About</a>
+                <a href="../../../bidang.html" class="hover:text-green-300 transition">Program</a>
+                <a href="../index.html" class="hover:text-green-300 transition">Sekbid 1</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero/Header Section -->
+    <header class="hero-pattern bg-green-900 bg-opacity-70 text-white">
+        <div class="container mx-auto px-4 py-10 md:py-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">OSIS SMAIT FITHRAH INSANI</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Program Kerja Idul Fitri 1446 H</h2>
+                <div class="flex justify-center">
+                    <div class="bg-white text-green-800 px-6 py-2 rounded-full font-bold shadow-lg">
+                        <i class="fas fa-calendar-day mr-2"></i> 9 April 2025
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Tujuan Section -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-green-800 mb-4 relative inline-block">
+                        <span class="relative z-10">Tujuan Program</span>
+                        <span class="absolute bottom-0 left-0 w-full h-2 bg-green-200 z-0 opacity-50"></span>
+                    </h2>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mt-2"></div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                            <img src="./idul-fitri/abrisem.JPG" alt="Tujuan Program" class="w-full h-auto rounded-lg">
+                        </div>
+                        <div class="md:w-1/2 relative z-10">
+                            <div class="absolute -top-10 -right-10 text-green-100 text-9xl z-0 hidden md:block">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="relative z-10">
+                                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                                    Menjadikan siswa/i yang mengetahui berapa besar dan pentingnya Idul Fitri, mengetahui Idul Fitri adalah suatu hari raya yang memang benar-benar penting dan memiliki balasan kebaikan yang begitu besar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknis Pelaksanaan -->
+        <section class="mb-16">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-green-800 mb-4 relative inline-block">
+                        <span class="relative z-10">Teknis Pelaksanaan</span>
+                        <span class="absolute bottom-0 left-0 w-full h-2 bg-green-200 z-0 opacity-50"></span>
+                    </h2>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mt-2"></div>
+                </div>
+                <div class="bg-gradient-to-r from-green-50 to-white rounded-xl shadow-lg p-8 md:p-10">
+                    <ul class="space-y-8">
+                        <li class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-green-100 rounded-full p-4 text-green-600 text-3xl shadow-md">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <div>
+                                <span class="font-bold text-green-800">9 April 2025</span><br>
+                                <span class="text-gray-800">Kegiatan Idul Fitri dilaksanakan pada tanggal ini.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-green-100 rounded-full p-4 text-green-600 text-3xl shadow-md">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <span class="font-bold text-green-800">Salam-salaman Guru & Siswa</span><br>
+                                <span class="text-gray-800">Para guru dan siswa saling bersalam-salaman sebagai bentuk silaturahmi dan saling memaafkan.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="flex-shrink-0 bg-green-100 rounded-full p-4 text-green-600 text-3xl shadow-md">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div>
+                                <span class="font-bold text-green-800">Video Amalan Ramadhan</span><br>
+                                <span class="text-gray-800">Setelah itu, siswa membuat video singkat mengenai amalan yang telah dilakukan selama bulan Ramadhan.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dokumentasi -->
+        <section class="mb-16">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-green-800 mb-4 relative inline-block">
+                        <span class="relative z-10">Dokumentasi Kegiatan</span>
+                        <span class="absolute bottom-0 left-0 w-full h-2 bg-green-200 z-0 opacity-50"></span>
+                    </h2>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mt-2"></div>
+                    <p class="text-gray-600 mt-4">Momen kebersamaan dalam menyambut hari kemenangan</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-lg col-animate">
+                        <img src="./idul-fitri/ke-1.png" 
+                             alt="Kegiatan Idul Fitri" class="w-full h-64 object-cover img-animate">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-gray-800 mb-2">Tanya jawab siswa</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-lg col-animate">
+                        <img src="./idul-fitri/ke-2.png" 
+                             alt="Kegiatan Idul Fitri" class="w-full h-64 object-cover img-animate">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-gray-800 mb-2">Amanat Kepala Sekolah</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-lg col-animate">
+                        <img src="./idul-fitri/ke-3.png" 
+                             alt="Kegiatan Idul Fitri" class="w-full h-64 object-cover img-animate">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-gray-800 mb-2">Musyafahah</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-mosque mr-2"></i> OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Sekbid 1</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    if (mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('hidden');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Animation for program cards
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

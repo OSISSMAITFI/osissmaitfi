@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <style>
+        /* Mobile nav overlay style */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(236, 72, 153, 0.97); /* pink-500 semi transparan */
+            z-index: 50;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .mobile-nav.active {
+            display: flex;
+        }
+        .mobile-nav a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 18px 0;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .mobile-nav a:hover {
+            color: #fbbf24;
+        }
+        .mobile-nav .close-btn {
+            font-size: 2.5rem;
+            color: #fff;
+            position: absolute;
+            top: 32px;
+            right: 32px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .desktop-nav { display: none !important; }
+            .hamburger-btn { display: block !important; }
+        }
+        @media (min-width: 769px) {
+            .hamburger-btn { display: none !important; }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentas Seni - OSIS SMAIT FITHRAH INSANI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+    <header class="bg-white text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                <span class="font-bold text-xl text-purple-600">OSIS SMAIT FITHRAH INSANI</span>
+            </div>
+            <div class="desktop-nav hidden md:flex space-x-6">
+                <a href="../../../index.html" class="text-gray-600 hover:text-purple-600 transition-all">Home</a>
+                <a href="../../../about.html" class="text-gray-600 hover:text-purple-600 transition-all">About</a>
+                <a href="../../../bidang.html" class="text-gray-600 hover:text-purple-600 transition-all">Program</a>
+                <a href="../index.html" class="text-gray-600 hover:text-purple-600 transition-all">Sekbid 5</a>
+            </div>
+            <button class="hamburger-btn md:hidden text-purple-600 text-3xl focus:outline-none" id="hamburger-menu-btn" aria-label="Buka menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav-menu">
+            <button class="close-btn" id="close-mobile-nav" aria-label="Tutup menu">&times;</button>
+            <a href="../../../index.html">Home</a>
+            <a href="../../../about.html">About</a>
+            <a href="../../../bidang.html">Program</a>
+            <a href="../index.html">Sekbid 5</a>
+        </div>
+    </nav>
+    <header class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white py-16 text-center">
+        <h1 class="text-5xl font-bold mb-4">Pentas Seni</h1>
+        <p class="text-xl max-w-2xl mx-auto">Wadah ekspresi, kreativitas, dan bakat seni siswa SMAIT Fithrah Insani melalui pertunjukan musik, tari, drama, dan karya seni lainnya.</p>
+    </header>
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-4 text-pink-700">Tentang Pentas Seni</h2>
+            <p class="text-xl mb-8 text-gray-700">Pentas Seni adalah program insidental yang memberikan kesempatan kepada siswa untuk menampilkan bakat dan kreativitas di bidang seni. Acara ini diisi dengan pertunjukan musik, tari, drama, dan pameran karya seni, serta menjadi ajang apresiasi dan hiburan bagi seluruh warga sekolah.</p>
+        </section>
+        <section>
+            <h2 class="text-2xl font-bold mb-4 text-pink-700">Galeri Kegiatan</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden aspect-square">
+                    <img src="../rutinan/Ourself Journey/1.jpg" alt="Pentas Seni 1" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden aspect-square">
+                    <img src="../rutinan/Ourself Journey/2.jpg" alt="Pentas Seni 2" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden aspect-square">
+                    <img src="../rutinan/Ourself Journey/3.jpg" alt="Pentas Seni 3" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+// Mobile nav toggle
+document.addEventListener('DOMContentLoaded', function() {
+    var openBtn = document.getElementById('hamburger-menu-btn');
+    var nav = document.getElementById('mobile-nav-menu');
+    var closeBtn = document.getElementById('close-mobile-nav');
+    if(openBtn && nav) {
+        openBtn.addEventListener('click', function() {
+            nav.classList.add('active');
+        });
+    }
+    if(closeBtn && nav) {
+        closeBtn.addEventListener('click', function() {
+            nav.classList.remove('active');
+        });
+    }
+    // Tutup menu jika klik di luar area menu
+    document.addEventListener('click', function(e) {
+        if(nav.classList.contains('active') && !nav.contains(e.target) && e.target !== openBtn) {
+            nav.classList.remove('active');
+        }
+    });
+    // Tutup menu dengan ESC
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape' && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Enlightment Trip</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4bf63b 0%, #81d81d 100%);
+        }
+        .book-icon {
+            transition: all 0.3s ease;
+        }
+        .book-icon:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span title="Ilustrasi Buku Terbuka" class="flex items-center">
+                    <i class="fas fa-book-open text-green-600 text-3xl"></i>
+                </span>
+                <h1 class="text-xl font-bold text-gray-700">OSIS SMAIT FITHRAH INSANI</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="../../../index.html" class="text-grat-600 font-medium hover:text-green-600">Home</a>
+                <a href="../../../about.html" class="text-gray-600 hover:text-green-600">About</a>
+                <a href="../../../bidang.html" class="text-gray-600 hover:text-green-600">Program</a>
+                <a href="../index.html" class="text-gray-600 hover:text-greem-600">Sekbid 4</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="../../../index.html" class="block py-2 text-gray-600">Home</a>
+            <a href="../../../about.html" class="block py-2 text-gray-600">About</a>
+            <a href="../../../bidang.html" class="block py-2 text-gray-600">Program</a>
+            <a href="../index.html" class="block py-2 text-gray-600">Sekbid 4</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Enlightment Trip</h1>
+                <p class="text-xl mb-6 opacity-90">Membekali siswa dengan keterampilan literasi untuk kegiatan positif</p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://img.icons8.com/color/240/000000/open-book.png" alt="Book" class="w-48 h-48 book-icon">
+                    <div class="absolute -bottom-4 -right-4 bg-yellow-400 text-gray-800 px-4 py-2 rounded-full font-bold">
+                        <i class="fas fa-lightbulb mr-2"></i> Literasi
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Program Goals -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Tujuan Program</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto mb-4"></div>
+                <!-- Foto Tujuan -->
+                <div class="mx-auto mb-4 w-60 h-60 bg-gray-200 rounded-xl flex items-center justify-center overflow-hidden">
+                    <img src="./Bincang Jendela Dunia/tsania.JPG" alt="Foto Kosong" class="object-cover w-full h-full rounded-xl">
+                </div>
+            </div>
+            <div class="max-w-3xl mx-auto bg-green-50 rounded-xl p-8 shadow-sm">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-bullseye text-blue-600 text-xl"></i>
+                    </div>
+                    <p class="text-gray-700 text-lg">
+                        Program kerja ini bertujuan untuk membekali siswa/i SMA IT Ftihrah Insani dengan keterampilan literasi tinggi saat melakukan kegiatan-kegiatan positif.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Teknis Pelaksanaan</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-book-reader text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Kegiatan Literasi</h3>
+                    <p class="text-gray-600">Siswa/i melakukan kegiatan literasi berupa membaca buku yang bermanfaat.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-check text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Pemeriksaan Buku</h3>
+                    <p class="text-gray-600">Ketua kelas memeriksa buku yang dibawa siswa agar sesuai ketentuan (tidak bergenre romance, bukan komik).</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chalkboard-teacher text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Lokasi Kegiatan</h3>
+                    <p class="text-gray-600">Kegiatan akan dilaksanakan di kelas masing-masing dengan pengawasan guru.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Dokumentasi</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Berikut beberapa momen kegiatan literasi yang telah dilaksanakan</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md">
+                    <img src="./Enlightment Trip/IMG-20250130-WA0032.jpg" 
+                         alt="Literasi Activity 1" 
+                         class="w-full h-64 object-cover hover:opacity-90 transition">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-medium text-gray-800">Sesi Membaca Bersama</h3>
+                        <p class="text-sm text-gray-500">Kelas X-D</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md">
+                    <img src="./Enlightment Trip/IMG-20250206-WA0016.jpg" 
+                         alt="Literasi Activity 2" 
+                         class="w-full h-64 object-cover hover:opacity-90 transition">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-medium text-gray-800">Diskusi Buku</h3>
+                        <p class="text-sm text-gray-500">Kelas XI-A</p>
+                    </div>
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md">
+                    <img src="./Enlightment Trip/MYXJ_20250130072048964_fast.jpg" 
+                         alt="Literasi Activity 3" 
+                         class="w-full h-64 object-cover hover:opacity-90 transition">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-medium text-gray-800">Sesi membaca bersama</h3>
+                        <p class="text-sm text-gray-500">Kelas XI-E</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+        </div>
+    </section>
+
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-book mr-2"></i> OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Sekbid 4</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Smooth scroll and button animation
+            var scrollBtn = document.querySelector('a[href="#program"]');
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', function(e) {
+                    var target = document.getElementById('program');
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        scrollBtn.classList.add('scale-95');
+                        setTimeout(function() {
+                            scrollBtn.classList.remove('scale-95');
+                        }, 200);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

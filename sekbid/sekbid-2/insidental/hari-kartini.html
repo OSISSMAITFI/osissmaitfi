@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Hari Kartini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Dokumentasi gallery: card potrait */
+        .card-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+        .card {
+            width: 240px;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+        .card img {
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+            background-color: #f5f5f5;
+            display: block;
+        }
+        .caption {
+            height: 20%;
+            padding: 10px 8px 0 8px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 700px) {
+            .card {
+                width: 62vw;
+                height: 90vw;
+                min-width: 160px;
+                min-height: 220px;
+            }
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../kartini/IMG_0433.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Dokumentasi gallery image: tidak crop, rasio asli, kotak seragam */
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background-color: #f0f0f0;
+            display: block;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Styling untuk gambar responsif */
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            display: block;
+        }
+
+        .image-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="flex items-center">
+                    <!-- Ikon Kartini SVG -->
+                    <span class="inline-block h-12 w-12 rounded-full bg-white p-1 shadow mr-2 flex items-center justify-center">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10">
+                            <circle cx="24" cy="24" r="22" fill="#F3E8FF" stroke="#A78BFA" stroke-width="2"/>
+                            <ellipse cx="24" cy="20" rx="7" ry="8" fill="#F9DCC4"/>
+                            <ellipse cx="24" cy="34" rx="12" ry="7" fill="#A78BFA"/>
+                            <ellipse cx="24" cy="19.5" rx="3.5" ry="4.5" fill="#F3E8FF"/>
+                            <ellipse cx="21.5" cy="19.5" rx="1.2" ry="1.5" fill="#A78BFA"/>
+                            <ellipse cx="26.5" cy="19.5" rx="1.2" ry="1.5" fill="#A78BFA"/>
+                            <ellipse cx="24" cy="23.5" rx="2" ry="1" fill="#EAB308"/>
+                            <rect x="21" y="27" width="6" height="2" rx="1" fill="#A78BFA"/>
+                        </svg>
+                    </span>
+                    <span class="ml-2 text-xl font-bold text-indigo-700">OSIS SMAIT FITHRAH INSANI</span>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i> 
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="../../../index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="../../../about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="../../../our-social-media.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Social Media</a>
+                <a href="../../sekbid-2/index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Sekbid 2</a>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4">
+            <a href="../../../index.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
+            <a href="../../../about.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
+            <a href="../../../our-social-media.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Social Media</a>
+            <a href="../../sekbid-2/index.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Sekbid 2</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center flex flex-col items-center">
+            <div class="flex flex-col md:flex-row items-center justify-center w-full mb-6">
+                <div class="flex-shrink-0 flex justify-center md:justify-end w-full md:w-auto mb-6 md:mb-0 md:mr-8">
+                    <!-- SVG Ilustrasi Hari Kartini -->
+                    <svg viewBox="0 0 120 120" width="120" height="120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="56" fill="#F3E8FF" stroke="#A78BFA" stroke-width="4"/>
+                        <ellipse cx="60" cy="54" rx="28" ry="32" fill="#F9DCC4"/>
+                        <ellipse cx="60" cy="100" rx="44" ry="18" fill="#A78BFA"/>
+                        <ellipse cx="60" cy="52" rx="14" ry="18" fill="#F3E8FF"/>
+                        <ellipse cx="50" cy="52" rx="4" ry="5" fill="#A78BFA"/>
+                        <ellipse cx="70" cy="52" rx="4" ry="5" fill="#A78BFA"/>
+                        <ellipse cx="60" cy="65" rx="7" ry="3" fill="#EAB308"/>
+                        <rect x="52" y="80" width="16" height="5" rx="2.5" fill="#A78BFA"/>
+                        <!-- Ornamen bunga -->
+                        <circle cx="30" cy="30" r="6" fill="#F472B6"/>
+                        <circle cx="90" cy="30" r="6" fill="#F472B6"/>
+                        <circle cx="30" cy="90" r="5" fill="#F472B6"/>
+                        <circle cx="90" cy="90" r="5" fill="#F472B6"/>
+                    </svg>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hari Kartini 2025</h1>
+                    <p class="text-xl md:text-2xl mb-8">Menginspirasi Perempuan, Menghargai Perjuangan</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#tujuan" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all">Tujuan Proker</a>
+                        <a href="#dokumentasi" class="bg-white hover:bg-gray-100 text-indigo-600 px-6 py-3 rounded-lg font-medium transition-all">Dokumentasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+    <!-- Tujuan Program Kerja -->
+    <section class="mb-16">
+        <div class="flex items-center mb-8">
+            <div class="h-1 bg-blue-500 w-12 mr-4"></div>
+            <h2 class="text-3xl font-bold text-gray-800">Tujuan Program Kerja</h2>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-8 max-w-6xl mx-auto card-hover transition duration-300">
+            <div class="tujuan-container" style="display: flex; align-items: center; justify-content: center; text-align: center; gap: 20px;">
+                <div class="bg-blue-100 p-4 rounded-full flex items-center justify-center">
+                    <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+                </div>
+                <p class="text-gray-700 text-lg leading-relaxed m-0">
+                    Untuk menginspirasi para perempuan dan menghargai hak-hak antara perempuan dan laki-laki,
+                    juga menghargai perjuangan perempuan dalam membangun bangsa dan negara.
+                </p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Teknis Pelaksanaan Section -->
+        <section id="teknis" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="h-1 w-12 bg-indigo-600 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Teknis Pelaksanaan</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-calendar-alt text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Waktu Pelaksanaan</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Kegiatan ini akan dilaksanakan pada <span class="font-semibold text-indigo-600">21 April 2025</span>, 
+                            bertepatan dengan Hari Kartini.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-indigo-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Lokasi Kegiatan</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Acara akan diselenggarakan di <span class="font-semibold">SMAIT Fithrah Insani</span>, 
+                            dengan berbagai rangkaian kegiatan yang menarik.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dokumentasi Section -->
+        <section id="dokumentasi" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="h-1 w-12 bg-indigo-600 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Dokumentasi</h2>
+            </div>
+            <div class="card-gallery">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="./kartini/IMG_0433.jpg" alt="Kegiatan Hari Kartini">
+                    <div class="caption">Pembukaan acara</div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="./kartini/IMG_0435.jpg" alt="Kegiatan Hari Kartini">
+                    <div class="caption">Materi</div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="./kartini/IMG_0453.jpg" alt="Kegiatan Hari Kartini">
+                    <div class="caption">Materi dari Guru</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-school mr-2"></i> OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../../sekbid-2/index.html" class="text-gray-400 hover:text-white">Sekbid 2</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

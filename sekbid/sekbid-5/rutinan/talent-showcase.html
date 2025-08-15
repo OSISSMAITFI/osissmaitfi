@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Talent Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-pattern {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-image {
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        .card-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card h4 {
+            font-weight: bold;
+            margin-top: 0.5rem;
+            color: #1f2937;
+        }
+        .card p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-indigo-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    
+                    <span class="font-bold text-xl">OSIS SMAIT FITHRAH INSANI</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../../../index.html" class="hover:text-indigo-200">Home</a>
+                    <a href="../../../bidang.html" class="hover:text-indigo-200">Programs</a>
+                    <a href="../../../about.html" class="hover:text-indigo-200">About</a>
+                    <a href="../../sekbid-5/index.html" class="hover:text-indigo-200">Sekbid 5</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-indigo-700 bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 text-2xl font-semibold text-white hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-8 text-white text-3xl focus:outline-none">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="../../../index.html" class="hover:text-indigo-200 transition-all">Home</a>
+        <a href="../../../bidang.html" class="hover:text-indigo-200 transition-all">Programs</a>
+        <a href="../../../about.html" class="hover:text-indigo-200 transition-all">About</a>
+        <a href="../../sekbid-5/index.html" class="hover:text-indigo-200 transition-all">Sekbid 5</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern bg-purple-600 to-purple-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Talent Showcase</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Mengasah minat dan bakat siswa/i untuk meningkatkan kepercayaan diri</p>
+            <div class="flex justify-center space-x-4">
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Tujuan Section -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo-800 mb-4">Tujuan Program</h2>
+                <div class="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
+                <!-- Foto kosong placeholder, ukuran sama seperti become-a-star -->
+                <div class="flex justify-center">
+                    <img src="./Talent Showcase/sigit.JPG" alt="Foto Kosong" class="rounded-xl shadow-lg object-cover w-[400px] h-[250px] bg-gray-200" style="max-width:100%;height:250px;">
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover transition duration-300">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Mengasah Minat</h3>
+                    <p class="text-gray-600">Memberikan wadah bagi siswa/i untuk mengembangkan minat mereka dalam berbagai bidang seni dan kreativitas.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover transition duration-300">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-star text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Mengembangkan Bakat</h3>
+                    <p class="text-gray-600">Membantu siswa/i menemukan dan mengembangkan bakat terpendam melalui berbagai kesempatan tampil.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover transition duration-300">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-user-shield text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Kepercayaan Diri</h3>
+                    <p class="text-gray-600">Membangun kepercayaan diri siswa/i melalui pengalaman tampil di depan umum dan menerima apresiasi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknis Pelaksanaan Section -->
+        <section class="mb-16 bg-indigo-50 rounded-2xl p-8 md:p-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo-800 mb-4">Teknis Pelaksanaan</h2>
+                <div class="w-24 h-1 bg-indigo-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-male text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Penampil Ikhwan</h3>
+                    </div>
+                    <p class="text-gray-600 pl-16">Akan tampil di panggung utama lapangan pada minggu ke-1 dan ke-3 setiap bulannya.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-female text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Penampil Akhwat</h3>
+                    </div>
+                    <p class="text-gray-600 pl-16">Akan tampil di panggung utama lapangan pada minggu ke-2 dan ke-4 setiap bulannya.</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+>
+            </div>
+        </section>
+
+        <!-- Dokumentasi Section -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-indigo-800 mb-4">Dokumentasi</h2>
+                <div class="w-24 h-1 bg-indigo-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Lihat momen-momen seru dari Talent Showcase sebelumnya</p>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <img src="./Talent Showcase/1.JPG" alt="Penampilan Musik">
+                    <h4>Penampilan Musik</h4>
+                    <p>Kelas XII Ikhwan</p>
+                </div>
+                <div class="card">
+                    <img src="./Talent Showcase/2.jpg" alt="Cover Guitar">
+                    <h4>Cover Guitar</h4>
+                    <p>Kelas XI Akhwat</p>
+                </div>
+                <div class="card">
+                    <img src="./Talent Showcase/3.jpg" alt="Sepak Bola">
+                    <h4>Sepak Bola</h4>
+                    <p>Kelas X dan XI</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+
+            </div>
+        </section>
+    </main>
+
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-star text-yellow-400 mr-2"></i> OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Sekbid 5</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Mobile menu toggle (overlay style)
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const closeBtn = document.getElementById('close-mobile-menu');
+            if (btn && menu && closeBtn) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.remove('hidden');
+                });
+                closeBtn.addEventListener('click', function(e) {
+                    menu.classList.add('hidden');
+                });
+                // Prevent click inside menu from closing
+                menu.addEventListener('click', function(e) {
+                    if (e.target === menu) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Smooth scroll and button animation
+            var scrollBtn = document.querySelector('a[href="#program"]');
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', function(e) {
+                    var target = document.getElementById('program');
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        scrollBtn.classList.add('scale-95');
+                        setTimeout(function() {
+                            scrollBtn.classList.remove('scale-95');
+                        }, 200);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

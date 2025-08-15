@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Marketday</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        @keyframes slide-in {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .animate-slide-in {
+            animation: slide-in 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="flex items-center">
+                    <span class="bg-green-100 rounded-full flex items-center justify-center h-10 w-10">
+                        <i class="fas fa-money-bill-wave text-green-600 text-2xl"></i>
+                    </span>
+                    <span class="ml-2 text-xl font-bold text-black">OSIS SMAIT FITHRAH INSANI</span>
+                </a>
+            </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="../../../index.html" class="py-2 px-3 text-gray-700 hover:text-blue-600">Home</a>
+                        <a href="../../../about.html" class="py-2 px-3 text-gray-700 hover:text-blue-600">About</a>
+                        <a href="../../../bidang.html" class="py-2 px-3 text-gray-700 hover:text-blue-600">Program</a>
+                        <a href="../sekbid-7.html" class="py-2 px-3 text-gray-700 hover:text-blue-600">Sekbid 7</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="outline-none">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-40 z-50 hidden">
+            <div class="absolute top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col space-y-4 animate-slide-in">
+                <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl mb-4 focus:outline-none">&times;</button>
+                <a href="../../../index.html" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="../../../about.html" class="block text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="../../../bidang.html" class="block text-gray-700 hover:text-blue-600 font-medium">Program</a>
+                <a href="../sekbid-7.html" class="block text-gray-700 hover:text-blue-600 font-medium">Sekbid 7</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white">
+        <div class="max-w-6xl mx-auto px-4 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Marketday</h1>
+                    <p class="text-xl mb-6">Wadah kreativitas dan kewirausahaan siswa SMAIT Fithrah Insani</p>
+                    <div class="flex space-x-4">
+                        <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-100 transition-all duration-150 active:scale-95">
+                            <i class="fas fa-info-circle mr-2"></i> Pelajari Lebih
+                        </a>
+                        <a href="#gallery" class="border-2 border-white px-6 py-3 rounded-lg font-medium text-white hover:bg-white hover:text-purple-700 transition-all duration-150 active:scale-95">
+                            <i class="fas fa-images mr-2"></i> Dokumentasi
+                        </a>
+                    </div>
+                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tujuan Program Kerja</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Meningkatkan Skill Kewirausahaan</h3>
+                    <p class="text-gray-600">Memberikan pengalaman langsung dalam mengelola bisnis kecil-kecilan untuk mengasah jiwa wirausaha siswa.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Wadah Kreativitas</h3>
+                    <p class="text-gray-600">Siswa dapat mengekspresikan ide kreatif melalui produk yang dijual, mulai dari makanan, kerajinan, hingga jasa.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition duration-300">
+                    <div class="text-pink-600 mb-4">
+                        <i class="fas fa-comments text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Keterampilan Komunikasi</h3>
+                    <p class="text-gray-600">Melatih kemampuan berkomunikasi dan mempromosikan produk kepada calon pembeli.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section class="bg-gray-50 py-12">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">Teknis Pelaksanaan</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mt-2"></div>
+      </div>
+      <div class="flex justify-center">
+        <div class="bg-white shadow-md rounded-xl p-6 w-full max-w-2xl">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">
+            Marketday & Classmeet 2025
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="text-blue-500">
+                📅
+              </div>
+              <div>
+                <p class="font-semibold">Tanggal Pelaksanaan</p>
+                <p>04 Juni 2025</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="text-purple-500">
+                👥
+              </div>
+              <div>
+                <p class="font-semibold">Peserta</p>
+                <p>Siswa/i kelas 10 dan 11</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="text-green-500">
+                📍
+              </div>
+              <div>
+                <p class="font-semibold">Lokasi</p>
+                <p>Area Sekolah SMAIT Fithrah Insani</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-600 text-blue-800 rounded">
+            Acara ini dilaksanakan bersamaan dengan Classmeet untuk menciptakan suasana yang lebih meriah.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Dokumentasi</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Lihat momen seru dari Marketday</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md">
+                    <img src="./Market Day/1.jpg" alt="Marketday Photo 1" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-gray-800">Marketday Ikhwan</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md">
+                    <img src="./Market Day/2.JPG" alt="Marketday Photo 2" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-gray-800">Berjualan Minuman</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md">
+                    <img src="./Market Day/3.jpg" alt="Marketday Photo 3" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-gray-800">Interaksi dengan Pembeli</h3>
+                    </div>
+                </div>
+            </div>
+            
+ <div class="text-center mt-10">
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Goals Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Goals</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <div class="flex justify-center">
+                    <!-- Ganti src sesuai path foto -->
+                    <img src="PATH_TO_YOUR_IMAGE.jpg" alt="Our Goals Photo" width="6000" height="4000" style="max-width:100%;height:auto;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.08);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+  <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-book mr-2"></i> OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../sekbid-7.html" class="text-gray-400 hover:text-white">Sekbid 7</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const closeBtn = document.getElementById('close-mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.remove('hidden');
+                });
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function() {
+                        menu.classList.add('hidden');
+                    });
+                }
+                document.addEventListener('click', function(e) {
+                    if (menu && !menu.classList.contains('hidden') && !menu.querySelector('div').contains(e.target) && !btn.contains(e.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Smooth scroll and button animation
+            var scrollBtn = document.querySelector('a[href="#program"]');
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', function(e) {
+                    var target = document.getElementById('program');
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        scrollBtn.classList.add('scale-95');
+                        setTimeout(function() {
+                            scrollBtn.classList.remove('scale-95');
+                        }, 200);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Aksi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #cbd5e6 0%, #9503c2 100%);
+        }
+        .section-divider {
+            position: relative;
+            height: 80px;
+            overflow: hidden;
+        }
+        .section-divider svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .floating-nav {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Floating Navigation -->
+    <nav class="floating-nav fixed top-0 left-0 right-0 bg-white/80 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-green-100 border border-green-300 shadow">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="11" width="18" height="10" rx="2" fill="#34D399"/>
+                        <rect x="8" y="2" width="8" height="8" rx="4" fill="#6EE7B7"/>
+                        <path d="M12 14v3M10.5 15.5h3" stroke="#065F46" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="text-xl font-bold text-purple-600">OSIS SMAIT FITHRAH INSANI</span>
+            </a>
+            <!-- Quick Navigation Buttons -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="../../../index.html" class="bg-blue-100 hover:bg-blue-200 text-purple-600 font-semibold px-4 py-2 rounded-full shadow transition-all flex items-center"><i class="fas fa-home mr-2"></i> Home</a>
+                <a href="../../../about.html" class="bg-blue-100 hover:bg-blue-200 text-purple-600 font-semibold px-4 py-2 rounded-full shadow transition-all flex items-center"><i class="fas fa-info-circle mr-2"></i> About</a>
+                <a href="../../../bidang.html" class="bg-blue-100 hover:bg-blue-200 text-purple-600 font-semibold px-4 py-2 rounded-full shadow transition-all flex items-center"><i class="fas fa-share-alt mr-2"></i> Program</a>
+                <a href="../index.html" class="bg-blue-100 hover:bg-blue-200 text-purple-600 font-semibold px-4 py-2 rounded-full shadow transition-all flex items-center"><i class="fas fa-layer-group mr-2"></i> Sekbid 6</a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-6">
+            </div>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700" title="Buka menu navigasi">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="../../../index.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+            <a href="../../../about.html" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+            <a href="../../../bidang.html" class="block py-2 text-gray-700 hover:text-blue-600">Program</a>
+            <a href="../index.html" class="block py-2 text-gray-700 hover:text-blue-600">Sekbid 6</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Aksi Peduli Lingkungan</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Gerakan mengurangi limbah plastik di lingkungan sekolah</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Tujuan Proker Section -->
+        <section id="tujuan" class="mb-20 scroll-mt-20">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-blue-100 p-6 rounded-xl">
+                        <img src="./Aksi/kezzia.JPG" 
+                             alt="Eco Friendly" 
+                             class="w-full h-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6 flex items-center">
+                        <span class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-bullseye text-blue-600"></i>
+                        </span>
+                        Tujuan Proker
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Meningkatkan kesadaran siswa/i betapa pentingnya menjaga lingkungan, dan untuk mengurangi limbah plastik di sekolah.
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                        <p class="text-blue-800 font-medium">
+                            <i class="fas fa-quote-left text-blue-400 mr-2"></i>
+                            Setiap langkah kecil dalam menjaga lingkungan akan membawa perubahan besar untuk masa depan kita.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider my-12">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.21,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-blue-100"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-blue-100"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-blue-100"></path>
+            </svg>
+        </div>
+
+        <!-- Teknis Pelaksanaan Section -->
+        <section id="teknis" class="mb-20 scroll-mt-20">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-green-100 p-6 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Eco Friendly" 
+                             class="w-full h-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-green-800 mb-6 flex items-center">
+                        <span class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-tasks text-green-600"></i>
+                        </span>
+                        Teknis Pelaksanaan
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Acara ini dilaksanakan setiap 2 minggu sekali, siswa/i membawa kotak makan, botol minum, dan alat makan dari rumah dan OSIS berkoordinasi dengan kantin untuk tidak menyediakan plastik.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 transition-all duration-300 card-hover">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-calendar-alt text-blue-600"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Jadwal</h3>
+                            </div>
+                            <p class="text-gray-600">Setiap 2 minggu sekali</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 transition-all duration-300 card-hover">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-utensils text-green-600"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Perlengkapan</h3>
+                            </div>
+                            <p class="text-gray-600">Bawa kotak makan & botol minum</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 transition-all duration-300 card-hover">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-handshake text-purple-600"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Kolaborasi</h3>
+                            </div>
+                            <p class="text-gray-600">Kerja sama dengan kantin sekolah</p>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 transition-all duration-300 card-hover">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-yellow-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-leaf text-yellow-600"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Dampak</h3>
+                            </div>
+                            <p class="text-gray-600">Pengurangan limbah plastik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dokumentasi Section -->
+        <section id="dokumentasi" class="scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center">
+                    <span class="bg-orange-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-camera text-orange-600"></i>
+                    </span>
+                    Dokumentasi
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Lihat momen-momen inspiratif dari kegiatan Aksi Peduli Lingkungan kami</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg card-hover">
+                    <img src="./Aksi/1.jpg" 
+                         alt="Dokumentasi 1" 
+                         class="w-full h-80 object-cover object-center">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Pengumuman lewat Speaker TU</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg card-hover">
+                    <img src="./Aksi/2.png" 
+                         alt="Dokumentasi 2" 
+                         class="w-full h-80 object-cover object-top">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Penyampaian melalui Poster</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg card-hover">
+                    <img src="./Aksi/3.jpg" 
+                         alt="Dokumentasi 3" 
+                         class="w-full h-80 object-cover object-center">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Pengumpulan sampah plastik</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+            </div>
+        </section>
+    </main>
+
+  <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="inline-flex items-center justify-center mr-2">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" fill="#6EE7B7"/>
+                                <rect x="9" y="7" width="6" height="10" rx="3" fill="#34D399"/>
+                                <path d="M12 10v4" stroke="#065F46" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="12" cy="9" r="1" fill="#065F46"/>
+                            </svg>
+                        </span>OSIS SMAIT FI
+                    </h3>
+                    <p class="text-gray-400">Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi Islam yang berkualitas.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Sekbid 6</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Instagram" aria-label="Ikuti kami di Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Facebook" aria-label="Ikuti kami di Facebook">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="text-gray-400 hover:text-white text-xl" title="Subscribe channel YouTube kami" aria-label="Subscribe channel YouTube kami">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@osissmaitfi" class="text-gray-400 hover:text-white text-xl" title="Ikuti kami di Twitter" aria-label="Ikuti kami di Twitter">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for program cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Smooth scroll and button animation
+            var scrollBtn = document.querySelector('a[href="#program"]');
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', function(e) {
+                    var target = document.getElementById('program');
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        scrollBtn.classList.add('scale-95');
+                        setTimeout(function() {
+                            scrollBtn.classList.remove('scale-95');
+                        }, 200);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

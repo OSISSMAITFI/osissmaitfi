@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/
+.env
+*.log
+build/
+dist/
+__pycache__/
+*.pyc
+npm-debug.log*
+package-lock.json
+.DS_Store
+.idea/
+
+# HTML/site specific
+*.local

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - PoddyCasty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .podcast-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .wave-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f3f4f6' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+        /* Update dropdown hover color to blue */
+        .dropdown-menu a:hover, #mobile-dropdown-menu a:hover {
+            background-color: #eff6ff !important; /* blue-50 */
+            color: #2563eb !important; /* blue-600 */
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                    <rect x="6" y="12" width="36" height="24" rx="4" fill="#2563eb"/>
+                    <rect x="12" y="18" width="24" height="12" rx="2" fill="#fff"/>
+                    <path d="M18 24h12M24 18v12" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="24" cy="24" r="2" fill="#2563eb"/>
+                </svg>
+                <span class="ml-2 text-xl font-bold text-indigo-700">OSIS SMAIT FITHRAH INSANI</span>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i> 
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="../../../index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="../../../about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="../../../bidang.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Program</a>
+                <a href="../../sekbid-3/index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Sekbid 3</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4">
+            <a href="../../../index.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
+            <a href="../../../about.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
+            <a href="../../../bidang.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Program</a>
+            <a href="../../sekbid-3/index.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Sekbid 3</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16 wave-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">PoddyCasty</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8">Inspirational stories to motivate SMAIT Fithrah Insani students</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#tujuan" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition duration-300">Tujuan</a>
+                <a href="#teknis" class="bg-indigo-700 text-white px-6 py-3 rounded-full font-medium hover:bg-indigo-800 transition duration-300">Teknis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Tujuan Section -->
+        <section id="tujuan" class="mb-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Ganti bagian gambar di sini -->
+                <div class="md:w-2/3 md:pr-0 mb-6 md:mb-0 flex-shrink-0">
+                    <img src="./Poddycasty/keisha.JPG" alt="Tujuan Program" class="w-2/3 md:w-1/2 h-auto rounded-lg object-cover mx-auto">
+                </div>
+                <!-- ...existing code... -->
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Tujuan Proker</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Menambah semangat motivasi siswa/i SMAIT Fithrah Insani dalam belajar melalui kisah para tokoh-tokoh yang inspiratif.
+                    </p>
+                    <div class="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-500">
+                        <h3 class="font-semibold text-indigo-700 mb-2">Impact</h3>
+                        <p class="text-gray-700">
+                            Podcast kami telah membantu lebih dari 200 siswa menemukan motivasi baru dalam belajar dan mengembangkan diri.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teknis Section -->
+        <section id="teknis" class="mb-16 bg-gray-50 rounded-xl p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Teknis Pelaksanaan</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-indigo-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Pencarian Tema</h3>
+                    <p class="text-gray-600">
+                        Pengurus OSIS akan mencari tema Podcast yang akan dikembangkan menjadi sebuah teks.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-indigo-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Produksi Konten</h3>
+                    <p class="text-gray-600">
+                        Teks akan direkam melalui rekaman suara dan diedit menjadi sebuah audio dan video.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-indigo-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Distribusi</h3>
+                    <p class="text-gray-600">
+                        Konten diunggah melalui media sosial "Spotify" dan "Instagram" sebulan sekali pada minggu ke-1 di hari Senin.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Call to Action -->
+        <section class="bg-indigo-600 text-white rounded-xl p-8 md:p-12 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Siap untuk Mendengarkan?</h2>
+            <p class="text-indigo-100 max-w-2xl mx-auto mb-8">
+                Temukan inspirasi dan motivasi baru melalui podcast kami yang tersedia di berbagai platform streaming.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition duration-300 flex items-center justify-center w-full sm:w-auto">
+                    <i class="fab fa-spotify mr-2 text-xl"></i> Spotify
+                </a>
+                <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="bg-white text-pink-600 px-6 py-3 rounded-full font-medium hover:bg-pink-50 transition duration-300 flex items-center justify-center w-full sm:w-auto">
+                    <i class="fab fa-instagram mr-2 text-xl"></i> Instagram
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">OSIS SMAIT FITHRAH INSANI</h3>
+                    <p class="text-gray-400">
+                        Membangun generasi muda yang berkarakter, berprestasi, dan berakhlak mulia berdasarkan nilai-nilai Pancasila.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../../../our-social-media.html" class="text-gray-400 hover:text-white">Social Media</a></li>
+                        <li><a href="../../sekbid-3/index.html" class="text-gray-400 hover:text-white">Sekbid 3</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-grey-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-grey-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                        <li class="flex items-center">
+
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="bg-gray-700 hover:bg-red-600 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="bg-gray-700 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="bg-gray-700 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="bg-gray-700 hover:bg-red-500 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OSIS SMAIT FITHRAH INSANI. All rights reserved.</p>
+                <p class="mt-2">Page updated: June 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Desktop dropdown toggle (on click)
+        const dropdownBidangBtn = document.getElementById('dropdownBidangBtn');
+        const dropdownBidangMenu = document.getElementById('dropdownBidangMenu');
+        if (dropdownBidangBtn && dropdownBidangMenu) {
+            dropdownBidangBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownBidangMenu.classList.toggle('hidden');
+            });
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownBidangBtn.contains(e.target) && !dropdownBidangMenu.contains(e.target)) {
+                    dropdownBidangMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        // Mobile dropdown toggle
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+        if (mobileDropdownBtn && mobileDropdownMenu) {
+            mobileDropdownBtn.addEventListener('click', function() {
+                mobileDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId) {
+                    const targetElement = document.getElementById(targetId.substring(1));
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

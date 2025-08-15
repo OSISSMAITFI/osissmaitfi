@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Bhaskara 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            animation: fadeIn 1.5s ease-in;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, .border-bottom {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .hero-banner {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        /* Tambahan style untuk navigasi responsif */
+        .nav-container {
+            position: relative;
+        }
+
+        .logo-container {
+            max-width: calc(100vw - 4rem);
+            overflow: hidden;
+        }
+
+        .logo-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+
+            .mobile-menu.active a {
+                display: block;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .mobile-menu.active a:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .mission-icon {
+            background: linear-gradient(135deg, #dfbf0d 0%, #FFF8DC 100%);
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(30, 58, 138, 0.2);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        .hero-banner {
+            position: relative;
+            width: 100vw;
+            height: calc(100vh - 64px);
+            /* 64px = tinggi header/top nav */
+            background: url('./global/Foto Bersama.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 64px;
+        }
+
+        .overlay {
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            /* darken image */
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .cta-button {
+            margin-top: 1rem;
+            display: inline-block;
+            background: #facc15;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #eab308;
+        }
+
+        /* Tambahkan CSS video-container agar responsif */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="border-bottom py-2" style="background-color: rgba(248, 249, 250, 0.8); backdrop-filter: blur(5px);">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="./global/logo.png" alt="Logo OSIS" class="rounded-circle me-2" width="32" height="32">
+                    <span class="fw-bold text-warning">OSIS SMAIT FITHRAH INSANI</span>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-4">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social
+                        Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </div>
+                <div class="d-lg-none">
+                    <button class="btn btn-outline-warning btn-sm" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#topNavCollapse" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Top Navigation -->
+            <div class="collapse mt-2" id="topNavCollapse">
+                <div class="d-flex flex-column gap-2">
+                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social
+                        Media</a>
+                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section (Fullscreen Banner) -->
+    <section class="hero-banner">
+        <div class="overlay">
+            <h1 class="display-2 fw-bold mb-4 text-shadow">BHASKARA 2025</h1>
+            <p class="lead fs-4 mb-4 text-shadow">Organisasi Siswa Intra Sekolah SMAIT Fithrah Insani</p>
+            <a href="#vision" class="cta-button">
+                <i class="fas fa-eye me-2"></i>Explore Our Vision & Mission
+            </a>
+        </div>
+    </section>
+
+    <div class="container my-5">
+
+        <!-- Vision Section -->
+        <section id="vision" class="py-5 bg-white">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark mb-3">Visi Kami</h2>
+                <div class="mx-auto bg-warning" style="width: 80px; height: 3px;"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-lg"
+                        style="background: linear-gradient(135deg, #ebd244 0%, #ffffff 100%);">
+                        <div class="card-body p-4 p-md-5 text-center">
+                            <blockquote class="">
+                                <p class="">
+                                    "Menjadikan OSIS SMA IT Fithrah Insani sebagai organisasi yang disiplin dan teladan
+                                    dalam menjalankan program kerja guna menunjang pengembangan kemampuan akademik
+                                    maupun non akademik siswa/i yang berlandaskan Al-Qur'an dan hadits."
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="py-5 bg-light">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-dark mb-3">Misi Kami</h2>
+                <div class="mx-auto bg-warning" style="width: 80px; height: 3px;"></div>
+            </div>
+            <div class="row g-4">
+                <!-- Mission 1 -->
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 80px; height: 80px;">
+                                <i class="fas fa-quran text-warning fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-3">Integrasi Nilai Islami</h5>
+                            <p class="card-text text-muted">
+                                Mengintegrasikan Nilai-nilai Al Qur'an dan hadits dalam kegiatan OSIS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 2 -->
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 80px; height: 80px;">
+                                <i class="fas fa-user-shield text-warning fa-2x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Kedisiplinan & Keteladanan</h5>
+                            <p class="card-text text-muted">
+                                Meningkatkan Kedisiplinan dan Keteladanan bagi seluruh pengurus OSIS serta memberikan
+                                contoh perilaku yang baik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 3 -->
+                <div class="col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-25 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 80px; height: 80px;">
+                                <i class="fas fa-graduation-cap text-warning fa-2x"></i>
+                            </div>
+                            <h5 class="card-title fw-bold text-dark mb-3">Pengembangan Potensi</h5>
+                            <p class="card-text text-muted">
+                                Menjadikan OSIS sebagai sarana pengembangan dan peningkatan potensi akademik maupun non
+                                akademik siswa/i SMAIT Fithrah Insani.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="py-5 bg-white">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-warning mb-3">Event Terakhir Kami</h2>
+                <div class="mx-auto bg-dark" style="width: 80px; height: 3px;"></div>
+            </div>
+
+            <div class="card border-0 shadow-lg overflow-hidden"
+                style="background: linear-gradient(135deg, #e0f2fe 0%, #e8eaf6 100%);">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <!-- Video YouTube Responsive -->
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/c6PPkZs-pbs"
+                                frameborder="0" allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="h4 fw-bold text-dark mb-3">MPLS 2025</h3>
+                            <p class="text-muted mb-3">
+                                Acara ini di sebut juga Masa Pengenalan Lingkungan Sekolah, adalah acara yang diselenggarakan OSIS SMAIT
+                                Fithrah Insani pada Tanggal 19-21 Maret 2025 di SMAIT Fithrah Insani.
+                            </p>
+                            <p class="text-muted mb-4">
+                                Kegiatan ini berisi tentang pengenalan peraturan sekolah, pengenalan guru, berbagai materi penting dan kedisiplinan.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary rounded-pill">Pengenalan</span>
+                                <span class="badge bg-success rounded-pill">Materi</span>
+                                <span class="badge bg-secondary rounded-pill">Sosialisasi</span>
+                                <span class="badge bg-warning rounded-pill">Belajar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Goals Section -->
+        <section id="our-goals" class="py-12">
+          <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-warning mb-6">Our Goals</h2>
+            <!-- Gambar di tengah -->
+            <div class="mb-6">
+              <img src="./global/FOBB.jpg" alt="Our Goals" class="mx-auto w-full max-w-3xl rounded-lg shadow-md">
+            </div>
+            <!-- Deskripsi dengan background biru muda -->
+            <div class="bg-blue-50 p-6 max-w-3xl mx-auto rounded-lg shadow-sm text-left">
+              <h3 class="text-xl font-bold mb-2">Forum OSIS Kab Bandung Barat</h3>
+              <p class="text-gray-700">
+                Pada Oktober 2024, OSIS SMAIT Fithrah Insani berhasilmemenang kan 2 penghargaan sekaligus pada acara FOBB (Forum OSIS Kabupaten Bandung Barat) pencapaian ini menjadi salah
+                satu kebanggaan bagi OSIS SMAIT Fithrah Insani, karena berhasil membawa nama baik sekolah.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        <section class="py-5 bg-light">
+            <div class="text-center mb-5">
+                <h2 class="h3 fw-bold text-warning mb-3">Galeri Momen</h2>
+                <div class="mx-auto bg-dark" style="width: 80px; height: 3px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <a href="#" target="_blank" rel="noopener" class="text-decoration-none">
+                            <img src="./global/_MG_9720.jpg" alt="Gallery Photo" class="card-img-top"
+                                style="height: 250px; object-fit: cover;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <a href="#" target="_blank" rel="noopener" class="text-decoration-none">
+                            <img src="./global/IMG_0711.jpg" alt="Gallery Photo" class="card-img-top"
+                                style="height: 250px; object-fit: cover;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <a href="#" target="_blank" rel="noopener" class="text-decoration-none">
+                            <img src="./global/IMG_2024_11_25_0633.jpg" alt="Gallery Photo" class="card-img-top"
+                                style="height: 250px; object-fit: cover;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <a href="#" target="_blank" rel="noopener" class="text-decoration-none">
+                            <img src="./global/Canon EOS 600D 5184x3456_000631.png" alt="Gallery Photo"
+                                class="card-img-top" style="height: 250px; object-fit: cover;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h5 class="fw-bold mb-3">OSIS SMAIT FITHRAH INSANI</h5>
+                    <p class="text-light opacity-75 mb-3">Bhaskara 2025 - Bermanfaat bersama, bersinar selamanya</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com/osissmaitfi/" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi?lang=id-ID" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481"
+                            class="text-light opacity-75 fs-4">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./index.html"
+                                class="text-light opacity-75 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="./about.html" class="text-light opacity-75 text-decoration-none">About
+                                Us</a></li>
+                        <li class="mb-2"><a href="./bidang.html"
+                                class="text-light opacity-75 text-decoration-none">Program Kerja</a></li>
+                        <li class="mb-2"><a href="./our-social-media.html"
+                                class="text-light opacity-75 text-decoration-none">Social Media</a></li>
+                        <li class="mb-2"><a href="./people.html" class="text-light opacity-75 text-decoration-none">Foto
+                                Anggota</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Contact Us</h6>
+                    <div class="d-flex mb-2">
+                        <i class="fas fa-map-marker-alt text-warning me-2 mt-1"></i>
+                        <span class="text-light opacity-75 small">SMAIT Fithrah Insani, Jl. H. Gofur No. 10 Tanimulya,
+                            Ngamprah, Kab. Bandung Barat</span>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fas fa-phone text-warning me-2"></i>
+                        <span class="text-light opacity-75 small">(022) 87805564</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+            <div class="text-center">
+                <p class="mb-0 text-light opacity-50">&copy; 2025 OSIS SMAIT Fithrah Insani - Bhaskara. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navigation active state management
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get current page name
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to current page nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Add accessibility improvements
+            document.querySelectorAll('a[href*="instagram"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on Instagram');
+                link.setAttribute('aria-label', 'Follow us on Instagram');
+            });
+
+            document.querySelectorAll('a[href*="youtube"]').forEach(link => {
+                link.setAttribute('title', 'Subscribe to our YouTube channel');
+                link.setAttribute('aria-label', 'Subscribe to our YouTube channel');
+            });
+
+            document.querySelectorAll('a[href*="tiktok"]').forEach(link => {
+                link.setAttribute('title', 'Follow us on TikTok');
+                link.setAttribute('aria-label', 'Follow us on TikTok');
+            });
+
+            document.querySelectorAll('a[href*="spotify"]').forEach(link => {
+                link.setAttribute('title', 'Listen to our Spotify podcast');
+                link.setAttribute('aria-label', 'Listen to our Spotify podcast');
+            });
+
+            // Add hover effects to cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Count Up Animation for Social Media Stats
+            const counters = document.querySelectorAll('.count');
+            counters.forEach(counter => {
+                const update = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const current = +counter.innerText;
+                    const speed = 200;
+                    const increment = target / speed;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                        setTimeout(update, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                update();
+            });
+        });
+
+        // Ripple effect for Explore button
+        const exploreBtn = document.getElementById('explore-btn');
+        if (exploreBtn) {
+            exploreBtn.addEventListener('click', function (e) {
+                // Ripple
+                const circle = document.createElement('span');
+                const diameter = Math.max(this.clientWidth, this.clientHeight);
+                const radius = diameter / 2;
+                circle.style.width = circle.style.height = `${diameter}px`;
+                circle.style.left = `${e.clientX - this.getBoundingClientRect().left - radius}px`;
+                circle.style.top = `${e.clientY - this.getBoundingClientRect().top - radius}px`;
+                circle.classList.add('ripple');
+                this.appendChild(circle);
+                setTimeout(() => circle.remove(), 600);
+                // Smooth scroll
+                e.preventDefault();
+                const target = document.getElementById('vision');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

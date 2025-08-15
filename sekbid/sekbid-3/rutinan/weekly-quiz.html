@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAIT FITHRAH INSANI - Weekly Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .quiz-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }   
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            animation: zoom 0.3s;
+        }
+        @keyframes zoom {
+            from {transform: scale(0.1)}
+            to {transform: scale(1)}
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-yellow-600 to-yellow-800 text-white py-8 px-4 md:px-8">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-2">
+                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                            <rect x="6" y="12" width="36" height="24" rx="4" fill="#2563eb"/>
+                            <rect x="12" y="18" width="24" height="12" rx="2" fill="#fff"/>
+                            <path d="M18 24h12M24 18v12" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="2" fill="#2563eb"/>
+                        </svg>
+                        <h1 class="text-3xl md:text-4xl font-bold">OSIS SMAIT FITHRAH INSANI</h1>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-semibold">Weekly Quiz</h2>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-white text-blue-600 px-4 py-2 rounded-full font-medium hover:bg-blue-50 transition">
+
+                    </a>
+                </div>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 mt-4">
+                <i class="fas fa-bars text-2xl"></i> 
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8 mt-6">
+                <a href="../../../index.html" class="nav-link text-gray-700 hover:text-yellow-600 font-medium">Home</a>
+                <a href="../../../about.html" class="nav-link text-gray-700 hover:text-yellow-600 font-medium">About</a>
+                <a href="../../../bidang.html" class="nav-link text-gray-700 hover:text-yellow-600 font-medium">Program</a>
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-yellow-600 font-medium">Sekbid 3</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4 mt-2 rounded-lg shadow">
+                <a href="../../../about.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="../../../about.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="../../../bidang.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Program</a>
+                <a href="../../sekbid-3/index.html" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">Sekbid 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 md:px-8 py-12">
+        <!-- Purpose Section -->
+        <section class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="h-1 bg-yellow-400 w-16 mr-4"></div>
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Tujuan Proker</h3>
+            </div>
+            <div class="flex flex-col md:flex-row items-start">
+                <div class="md:w-2/3 md:pr-0 mb-6 md:mb-0 flex-shrink-0">
+                    <img src="./weekly-quiz/daus.JPG" alt="Tujuan Program" class="w-full h-auto rounded-lg object-cover">
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8 quiz-card flex-1">
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Weekly Quiz ini bertujuan untuk mengulas atau mengingat materi pelajaran yang telah dipelajari maupun yang sedang dipelajari di kelas 10, 11, dan 12. Program ini membantu siswa dalam mempersiapkan diri menghadapi ujian sekaligus memperdalam pemahaman mereka terhadap materi yang telah diajarkan.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-brain mr-1"></i> Memperkuat Memori
+                        </span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-book mr-1"></i> Materi Kelas 10-12
+                        </span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-users mr-1"></i> Untuk Semua Siswa
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Section -->
+        <section class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="h-1 bg-yellow-600 w-16 mr-4"></div>
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Teknis Pelaksanaan</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8 quiz-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-newspaper text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800">Poster Materi</h4>
+                    </div>
+                    <p class="text-gray-700">
+                        Membuat poster yang berisi materi dan soal tentang mata pelajaran di kelas 10, 11, dan 12. Poster ini dirancang menarik dengan visual yang membantu pemahaman.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 md:p-8 quiz-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-share-alt text-purple-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800">Distribusi</h4>
+                    </div>
+                    <p class="text-gray-700">
+                        Poster akan dipasang di majalah dinding sekolah dan diunggah di Instagram Story OSIS SMAIT Fithrah Insani untuk menjangkau lebih banyak siswa.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation Section -->
+        <section>
+            <div class="flex items-center mb-8">
+                <div class="h-1 bg-purple-500 w-16 mr-4"></div>
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Dokumentasi</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative group">
+                    <img src="./weekly-quiz/1.png" 
+                         alt="Weekly Quiz Documentation 1" 
+                         class="w-full h-64 object-cover rounded-xl cursor-pointer hover:opacity-90 transition"
+                         onclick="openModal(this)">
+                </div>
+                <div class="relative group">
+                    <img src="./weekly-quiz/2.png" 
+                         alt="Weekly Quiz Documentation 2" 
+                         class="w-full h-64 object-cover rounded-xl cursor-pointer hover:opacity-90 transition"
+                         onclick="openModal(this)">
+                </div>
+                <div class="relative group">
+                    <img src="./weekly-quiz/3.png" 
+                         alt="Weekly Quiz Documentation 3" 
+                         class="w-full h-64 object-cover rounded-xl cursor-pointer hover:opacity-90 transition"
+                         onclick="openModal(this)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Modal -->
+        <div id="imageModal" class="image-modal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">OSIS SMAIT FITHRAH INSANI</h3>
+                    <p class="text-gray-400">
+                        Membangun generasi muda yang berkarakter, berprestasi, dan berakhlak mulia berdasarkan nilai-nilai Pancasila.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../../../index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="../../../about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="../../../bidang.html" class="text-gray-400 hover:text-white">Program</a></li>
+                        <li><a href="../../sekbid-3/index.html" class="text-gray-400 hover:text-white">Sekbid 3</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-grey-400"></i>
+                            <span class="text-gray-400">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab. Bandung Barat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-grey-400"></i>
+                            <span class="text-gray-400">(022) 87805564</span>
+                        </li>
+                        <li class="flex items-center">
+
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/osissmaitfi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="bg-gray-700 hover:bg-red-600 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="bg-gray-700 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://open.spotify.com/show/0LNgKunTS7KWBCv3JXFnSw" class="bg-gray-700 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@osissmaitfithrahinsani9481" class="bg-gray-700 hover:bg-red-500 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OSIS SMAIT FITHRAH INSANI. All rights reserved.</p>
+                <p class="mt-2">Page updated: June 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Desktop dropdown toggle (on click)
+        const dropdownBidangBtn = document.getElementById('dropdownBidangBtn');
+        const dropdownBidangMenu = document.getElementById('dropdownBidangMenu');
+        if (dropdownBidangBtn && dropdownBidangMenu) {
+            dropdownBidangBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownBidangMenu.classList.toggle('hidden');
+            });
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownBidangBtn.contains(e.target) && !dropdownBidangMenu.contains(e.target)) {
+                    dropdownBidangMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        // Mobile dropdown toggle
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+        if (mobileDropdownBtn && mobileDropdownMenu) {
+            mobileDropdownBtn.addEventListener('click', function() {
+                mobileDropdownMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId) {
+                    const targetElement = document.getElementById(targetId.substring(1));
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
