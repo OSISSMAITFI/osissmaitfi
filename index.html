@@ -192,7 +192,7 @@
                     </div>
                 </div>
                 <!-- Mobile Navigation -->
-                <div id="mobile-menu" class="d-lg-none" style="display:none;">
+                <div id="mobile-menu" class="d-lg-none mobile-menu-anim">
                     <div class="d-flex flex-column gap-2 mt-2">
                         <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
                         <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
@@ -402,17 +402,26 @@
             </div>
         </section>
         </div>
+        <style>
+            .mobile-menu-anim {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 1.2s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
+            }
+            .mobile-menu-anim.show {
+                max-height: 500px;
+                opacity: 1;
+                transition: max-height 1.2s cubic-bezier(0.4,0,0.2,1), opacity 0.7s;
+            }
+        </style>
         <script>
-            // Mobile menu toggle
+            // Mobile menu toggle with animation
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileMenuBtn && mobileMenu) {
                 mobileMenuBtn.addEventListener('click', function() {
-                    if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-                        mobileMenu.style.display = 'block';
-                    } else {
-                        mobileMenu.style.display = 'none';
-                    }
+                    mobileMenu.classList.toggle('show');
                 });
             }
         </script>
