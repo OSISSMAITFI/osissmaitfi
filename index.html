@@ -170,42 +170,39 @@
 </head>
 
 <body>
-    <!-- Top Navigation Bar -->
-    <div class="border-bottom py-2" style="background-color: rgba(248, 249, 250, 0.8); backdrop-filter: blur(5px);">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
-                    <img src="./global/logo.png" alt="Logo OSIS" class="rounded-circle me-2" width="32" height="32">
-                    <span class="fw-bold text-warning">OSIS SMAIT FITHRAH INSANI</span>
+        <!-- Top Navigation Bar -->
+        <nav class="border-bottom py-2 bg-white shadow-sm sticky top-0 z-50">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <img src="./global/logo.png" alt="Logo OSIS" class="rounded-circle me-2" width="32" height="32">
+                        <span class="fw-bold text-warning">OSIS SMAIT FITHRAH INSANI</span>
+                    </div>
+                    <div class="d-none d-lg-flex align-items-center gap-4">
+                        <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                        <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                        <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                        <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
+                        <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                    </div>
+                    <div class="d-lg-none">
+                        <button id="mobile-menu-btn" class="btn btn-outline-warning btn-sm" type="button" aria-label="Toggle navigation menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="d-none d-lg-flex align-items-center gap-4">
-                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
-                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
-                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
-                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social
-                        Media</a>
-                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
-                </div>
-                <div class="d-lg-none">
-                    <button class="btn btn-outline-warning btn-sm" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#topNavCollapse" title="Toggle navigation menu" aria-label="Toggle navigation menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile Top Navigation -->
-            <div class="collapse mt-2" id="topNavCollapse">
-                <div class="d-flex flex-column gap-2">
-                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
-                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
-                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
-                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social
-                        Media</a>
-                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="d-lg-none" style="display:none;">
+                    <div class="d-flex flex-column gap-2 mt-2">
+                        <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                        <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                        <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                        <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
+                        <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </nav>
 
     <!-- Hero Section (Fullscreen Banner) -->
     <section class="hero-banner">
@@ -404,7 +401,21 @@
                 </div>
             </div>
         </section>
-    </div>
+        </div>
+        <script>
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+                        mobileMenu.style.display = 'block';
+                    } else {
+                        mobileMenu.style.display = 'none';
+                    }
+                });
+            }
+        </script>
     <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container">
