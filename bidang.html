@@ -2,6 +2,61 @@
 <html lang="en">
 
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            animation: fadeIn 1.5s ease-in;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-container {
+            position: relative;
+        }
+        .logo-container {
+            max-width: calc(100vw - 4rem);
+            overflow: hidden;
+        }
+        .logo-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            .mobile-menu.active a {
+                display: block;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            .mobile-menu.active a:last-child {
+                border-bottom: none;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSIS SMAIT FITHRAH INSANI - Program Kerja</title>
@@ -9,39 +64,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Custom mobile menu overlay */
+        .mobile-menu-anim {
+            transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            z-index: 1000;
+        }
+        .mobile-menu-anim.show {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .mobile-hamburger {
+            background: #ffc107;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .mobile-hamburger:hover, .mobile-hamburger:focus {
+            background: #ffe066;
+        }
         nav {
             transition: all 0.3s ease;
         }
-
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-
         body {
             animation: fadeIn 1.5s ease-in;
         }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
         .transition-all {
             transition: all 0.3s ease;
         }
-
         /* Custom button styles for btn-detail */
         .btn-detail {
             display: inline-block;
@@ -57,13 +137,11 @@
             transition: all 0.3s ease;
             line-height: 1.5;
         }
-
         .btn-detail:hover {
             color: white;
             background-color: #e60000;
             border-color: #e60000;
         }
-
         /* Custom button styles for btn-detail-green */
         .btn-detail-green {
             display: inline-block;
@@ -79,23 +157,23 @@
             transition: all 0.3s ease;
             line-height: 1.5;
         }
-
         .btn-detail-green:hover {
             color: white;
             background-color: #07b04b;
             border-color: #07b04b;
         }
     </style>
+    </style>
 </head>
 
 <body class="bg-gray-50 font-sans">
     <!-- Top Navigation Bar -->
-    <div class="bg-light border-bottom py-2">
-        <div class="container">
+    <nav class="border-bottom py-2 bg-white shadow-sm sticky top-0 z-50">
+        <div class="container nav-container">
             <div class="d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center logo-container">
                     <img src="./global/logo.png" alt="Logo OSIS" class="rounded-circle me-2" width="32" height="32">
-                    <span class="fw-bold text-warning">OSIS SMAIT FITHRAH INSANI</span>
+                    <span class="fw-bold text-warning logo-text">OSIS SMAIT FITHRAH INSANI</span>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-4">
                     <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
@@ -105,23 +183,21 @@
                     <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
                 </div>
                 <div class="d-lg-none">
-                    <button class="btn btn-outline-warning btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#topNavCollapse">
+                    <button id="mobile-menu-btn" class="btn btn-outline-warning btn-sm" type="button" aria-label="Toggle navigation menu">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
-            <!-- Mobile Top Navigation -->
-            <div class="collapse mt-2" id="topNavCollapse">
-                <div class="d-flex flex-column gap-2">
-                    <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
-                    <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
-                    <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
-                    <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
-                    <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
-                </div>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu d-lg-none">
+                <a href="index.html" class="text-warning text-decoration-none fw-medium">Home</a>
+                <a href="about.html" class="text-warning text-decoration-none fw-medium">About</a>
+                <a href="bidang.html" class="text-warning text-decoration-none fw-medium">Program Kerja</a>
+                <a href="our-social-media.html" class="text-warning text-decoration-none fw-medium">Our Social Media</a>
+                <a href="people.html" class="text-warning text-decoration-none fw-medium">Foto Anggota</a>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="text-white py-5" style="background: linear-gradient(90deg, #e0bc06 0%, #FFF8DC 100%);">
@@ -300,9 +376,45 @@
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-6">
-                    <h5 class="fw-bold mb-3">OSIS SMAIT FITHRAH INSANI</h5>
-                    <p class="text-light opacity-75 mb-3">Bhaskara 2025 - Bermanfaat bersama, bersinar selamanya</p>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-school me-2"></i> OSIS SMAIT FI
+                    </h5>
+                    <p class="text-light opacity-75">
+                        Organisasi Siswa Intra Sekolah SMA IT Fithrah Insani yang berkomitmen untuk membangun generasi
+                        Islam yang berkualitas.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-semibold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./index.html"
+                                class="text-light opacity-75 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="./about.html"
+                                class="text-light opacity-75 text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="./bidang.html"
+                                class="text-light opacity-75 text-decoration-none">Program Kerja</a></li>
+                        <li class="mb-2"><a href="./our-social-media.html"
+                                class="text-light opacity-75 text-decoration-none">Social Media</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-semibold mb-3">Hubungi Kami</h6>
+                    <div class="d-flex mb-2">
+                        <i class="fas fa-map-marker-alt text-primary me-2 mt-1"></i>
+                        <span class="text-light opacity-75 small">JL. H. Gofur No. 10, Tanimulya, Kec. Ngamprah, Kab.
+                            Bandung Barat</span>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fas fa-phone text-primary me-2"></i>
+                        <span class="text-light opacity-75 small">(022) 87805564</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <h6 class="fw-semibold mb-3">Media Sosial</h6>
                     <div class="d-flex gap-3">
                         <a href="https://www.instagram.com/osissmaitfi/" class="text-light opacity-75 fs-4">
                             <i class="fab fa-instagram"></i>
@@ -311,59 +423,101 @@
                             class="text-light opacity-75 fs-4">
                             <i class="fab fa-spotify"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@osissmaitfi?lang=id-ID" class="text-light opacity-75 fs-4">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
                         <a href="https://www.youtube.com/@osissmaitfithrahinsani9481"
                             class="text-light opacity-75 fs-4">
                             <i class="fab fa-youtube"></i>
                         </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h6 class="fw-semibold mb-3">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="./index.html"
-                                class="text-light opacity-75 text-decoration-none">Home</a></li>
-                        <li class="mb-2"><a href="./about.html" class="text-light opacity-75 text-decoration-none">About
-                                Us</a></li>
-                        <li class="mb-2"><a href="./bidang.html"
-                                class="text-light opacity-75 text-decoration-none">Program Kerja</a></li>
-                        <li class="mb-2"><a href="./our-social-media.html"
-                                class="text-light opacity-75 text-decoration-none">Social Media</a></li>
-                        <li class="mb-2"><a href="./people.html" class="text-light opacity-75 text-decoration-none">Foto
-                                Anggota</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h6 class="fw-semibold mb-3">Contact Us</h6>
-                    <div class="d-flex mb-2">
-                        <i class="fas fa-map-marker-alt text-warning me-2 mt-1"></i>
-                        <span class="text-light opacity-75 small">SMAIT Fithrah Insani, Jl. H. Gofur No. 10 Tanimulya,
-                            Ngamprah, Kab. Bandung Barat</span>
-                    </div>
-                    <div class="d-flex">
-                        <i class="fas fa-phone text-warning me-2"></i>
-                        <span class="text-light opacity-75 small">(022) 87805564</span>
+                        <a href="https://www.tiktok.com/@osissmaitfi" class="text-light opacity-75 fs-4">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <hr class="my-4 opacity-25">
             <div class="text-center">
-                <p class="mb-0 text-light opacity-50">&copy; 2025 OSIS SMAIT Fithrah Insani - Bhaskara. All rights
-                    reserved.</p>
+                <p class="mb-0 text-light opacity-50">&copy; 2025 OSIS SMAIT Fithrah Insani. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navigation active state management
+        // Mobile menu toggle (sama seperti index.html)
         document.addEventListener('DOMContentLoaded', function () {
-            // Get current page name
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('active');
+                });
+                // Close menu on outside click
+                document.addEventListener('click', function (e) {
+                    if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && e.target !== mobileMenuBtn) {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+                // Close menu on ESC
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+        // Mobile menu toggle with slide-down animation (custom, not Bootstrap)
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (!mobileMenu.classList.contains('show')) {
+                        mobileMenu.style.display = 'block';
+                        setTimeout(() => {
+                            mobileMenu.classList.add('show');
+                        }, 10);
+                    } else {
+                        mobileMenu.classList.remove('show');
+                        setTimeout(() => {
+                            mobileMenu.style.display = 'none';
+                        }, 700);
+                    }
+                };
+                // Prevent menu click from closing itself
+                mobileMenu.onclick = function(e) {
+                    e.stopPropagation();
+                };
+                // Close menu on outside click (only if not clicking menu or button)
+                document.addEventListener('click', function(e) {
+                    if (
+                        mobileMenu.classList.contains('show') &&
+                        !mobileMenu.contains(e.target) &&
+                        e.target !== mobileMenuBtn &&
+                        !mobileMenuBtn.contains(e.target)
+                    ) {
+                        mobileMenu.classList.remove('show');
+                        setTimeout(() => {
+                            mobileMenu.style.display = 'none';
+                        }, 700);
+                    }
+                });
+                // Close menu on ESC
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && mobileMenu.classList.contains('show')) {
+                        mobileMenu.classList.remove('show');
+                        setTimeout(() => {
+                            mobileMenu.style.display = 'none';
+                        }, 700);
+                    }
+                });
+            }
+        });
+        // Navigation and page functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navigation active state management
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
             // Remove active class from all nav links
@@ -378,7 +532,7 @@
                 }
             });
 
-            // Add accessibility improvements
+            // Add accessibility improvements for social media links
             document.querySelectorAll('a[href*="instagram"]').forEach(link => {
                 link.setAttribute('title', 'Follow us on Instagram');
                 link.setAttribute('aria-label', 'Follow us on Instagram');
@@ -410,62 +564,22 @@
                 });
             });
 
-            // Count Up Animation for Social Media Stats
-            const counters = document.querySelectorAll('.count');
-            counters.forEach(counter => {
-                const update = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const current = +counter.innerText;
-                    const speed = 200;
-                    const increment = target / speed;
-                    if (current < target) {
-                        counter.innerText = Math.ceil(current + increment);
-                        setTimeout(update, 20);
-                    } else {
-                        counter.innerText = target;
+            // Simple animation for program cards when they come into view
+            const programCards = document.querySelectorAll('.program-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
                     }
-                };
-                update();
-            });
-        });
+                });
+            }, { threshold: 0.1 });
 
-        // Ripple effect for Explore button
-        const exploreBtn = document.getElementById('explore-btn');
-        if (exploreBtn) {
-            exploreBtn.addEventListener('click', function (e) {
-                // Ripple
-                const circle = document.createElement('span');
-                const diameter = Math.max(this.clientWidth, this.clientHeight);
-                const radius = diameter / 2;
-                circle.style.width = circle.style.height = `${diameter}px`;
-                circle.style.left = `${e.clientX - this.getBoundingClientRect().left - radius}px`;
-                circle.style.top = `${e.clientY - this.getBoundingClientRect().top - radius}px`;
-                circle.classList.add('ripple');
-                this.appendChild(circle);
-                setTimeout(() => circle.remove(), 600);
-                // Smooth scroll
-                e.preventDefault();
-                const target = document.getElementById('vision');
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        }
-
-        // Smooth scrolling for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+            programCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
             });
         });
     </script>
