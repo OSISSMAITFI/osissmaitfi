@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <style>
+            .dokumentasi {
+                text-align: center;
+                padding: 50px 20px;
+            }
+            .dokumentasi h2 {
+                font-size: 36px;
+                font-weight: bold;
+                color: #0da139;
+                margin-bottom: 30px;
+            }
+            .foto-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .foto {
+                width: 300px;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                transition: transform 0.3s;
+            }
+            .foto:hover {
+                transform: scale(1.05);
+            }
+            .foto img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        </style>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSIS SMAIT FITHRAH INSANI - One Day One Juz</title>
@@ -191,6 +226,22 @@
             </div>
         </section>
     </main>
+
+        <!-- Dokumentasi Kegiatan -->
+        <section class="dokumentasi">
+            <h2>Dokumentasi Kegiatan</h2>
+            <div class="foto-container">
+                <div class="foto">
+                    <img src="./one-day-one-juz/1.jpg" alt="Dokumentasi 1">
+                </div>
+                <div class="foto">
+                    <img src="./one-day-one-juz/2.jpg" alt="Dokumentasi 2">
+                </div>
+                <div class="foto">
+                    <img src="./one-day-one-juz/3.jpg" alt="Dokumentasi 3">
+                </div>
+            </div>
+        </section>
 
     <!-- Footer -->
     <footer class="bg-green-800 text-white pt-12 pb-6">
