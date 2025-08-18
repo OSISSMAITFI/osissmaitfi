@@ -22,6 +22,26 @@
         .transition-all {
             transition: all 0.3s ease;
         }
+        .card {
+            background: #e9fdf1;
+            padding: 20px;
+            border-radius: 12px;
+            width: 100%;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
@@ -113,27 +133,12 @@
             </div>
             
             <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Step 1 -->
-                    <div class="bg-blue-50 p-6 rounded-lg transition-all card-hover">
-                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Penyampaian Materi</h3>
-                        <p class="text-gray-600">OSIS akan menyampaikan kepada ketua kelas untuk mengirimkan BC pada pagi hari ke grup kelas.</p>
-                    </div>
-                    
-                    <!-- Step 2 -->
-                    <div class="bg-green-50 p-6 rounded-lg transition-all card-hover">
-                        <div class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-4">2</div>
+                <div class="wrapper">
+                    <div class="card">
                         <h3 class="text-xl font-semibold mb-3 text-gray-800">Penyampaian Saat Istirahat</h3>
-                        <p class="text-gray-600">Materi akan disampaikan saat istirahat ke-2 melalui speaker yang di dengar oleh seluruh siswa.</p>
+                        <p class="text-gray-600">Materi akan disampaikan saat istirahat ke-2 melalui speaker yang di dengar oleh seluruh siswa, lalu siswa/i akan di berikan google form, dan diisi setelah pulang sekolah.</p>
                     </div>
-                    
-                    <!-- Step 3 -->
-                    <div class="bg-purple-50 p-6 rounded-lg transition-all card-hover">
-                        <div class="bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Evaluasi</h3>
-                        <p class="text-gray-600">Siswa/i akan mengisi google form sebagai bentuk evaluasi dan partisipasi dalam program ini.</p>
-                    </div>
+                </div>
                 </div>
             </div>
         </section>
