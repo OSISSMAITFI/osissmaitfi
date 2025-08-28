@@ -7,6 +7,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        .tujuan-proker {
+            margin: 20px 0;
+        }
+        .tujuan-proker .judul {
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-left: 4px solid #2563eb;
+            padding-left: 8px;
+            margin-bottom: 12px;
+        }
+                .tujuan-proker .card {
+                    background: #fff;
+                    border-radius: 12px;
+                    padding: 32px 32px 24px 32px;
+                    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+                    display: block;
+                    text-align: left;
+                    max-width: 1100px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 1.15rem;
+                }
+            @media (max-width: 900px) {
+                .tujuan-proker .card {
+                    max-width: 100%;
+                    padding: 18px 10px 14px 10px;
+                    font-size: 1rem;
+                }
+            }
+        .tujuan-proker .tags {
+            margin-top: 12px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+        .blue { background: #dbeafe; color: #1e40af; }
+        .green { background: #d1fae5; color: #065f46; }
+        .yellow { background: #fef3c7; color: #92400e; }
         .dropdown:hover .dropdown-menu {
             display: block;
         }
@@ -80,36 +123,27 @@
     <section class="bg-black text-white py-20 md:py-32">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Direct Marketing</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Mengelola buku bekas menjadi barang bernilai dan sarana belajar kewirausahaan</p>
         </div>
     </section>
+
+
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
         <!-- Tujuan Proker Section -->
-        <section id="tujuan" class="mb-20">
-            <div class="flex items-center mb-8">
-                <div class="h-1 w-12 bg-blue-600 mr-4"></div>
-                <h2 class="text-3xl font-bold text-gray-800">Tujuan Proker</h2>
-            </div>
-            
-            <div class="bg-white rounded-xl shadow-lg p-8 md:p-10">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    </div>
-                    <div class="md:w-1/2">
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            Menjadikan siswa/i SMA IT Fitrah Insani dapat mengelola buku bekas menjadi barang yang bernilai dan menjadikan sarana belajar kewirausahaan. Program ini bertujuan untuk mengembangkan kreativitas dan jiwa wirausaha siswa dengan memanfaatkan sumber daya yang ada di sekitar mereka.
+                <section class="tujuan-proker mb-20">
+                    <h2 class="judul">Tujuan Proker</h2>
+                    <div class="card">
+                        <p>
+                            Program kerja ini bertujuan untuk melatih jiwa kewirausahaan dan kemampuan sosial osis dalam mengelola program yang bermanfaat bagi masyarakat.
                         </p>
-                        <div class="mt-6 flex flex-wrap gap-3">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Kewirausahaan</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Lingkungan</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Kreativitas</span>
+                        <div class="tags">
+                            <span class="tag blue">Kewirausahaan</span>
+                            <span class="tag green">Lingkungan</span>
+                            <span class="tag yellow">Kreativitas</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
         <!-- Divider -->
         <div class="section-divider my-12"></div>
@@ -120,17 +154,52 @@
                 <div class="h-1 w-12 bg-blue-600 mr-4"></div>
                 <h2 class="text-3xl font-bold text-gray-800">Teknis Pelaksanaan</h2>
             </div>
-            
             <div class="bg-white rounded-xl shadow-lg p-8 md:p-10">
-                <div class="flex flex-col md:flex-row-reverse items-center">
-                    <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                <p class="text-lg text-gray-700 leading-relaxed text-center mb-8">
+                    Osis menjual pakaian bekas layak pakai kepada masyarakat. Pakaian-pakaian bekas dikumpulkan dan dijual dengan harga terjangkau, mulai dari Rp 25.000 hingga Rp 75.000.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <!-- Card 1: Pengumpulan & Seleksi -->
+                    <div class="flex flex-col items-center bg-white rounded-xl shadow p-6 w-full md:w-80">
+                        <div class="bg-yellow-100 p-4 rounded-full mb-3 flex items-center justify-center">
+                            <i class="fas fa-box-open text-yellow-600 text-3xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-1 text-center">Pengumpulan & Seleksi</h3>
+                        <p class="text-gray-700 text-sm text-center">Pakaian bekas layak pakai dikumpulkan dari siswa, guru, dan warga sekolah, lalu diseleksi agar layak jual.</p>
                     </div>
-                    <div class="md:w-1/2">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            Acara ini akan dilaksanakan pada 17 Agustus 2025 di SMAIT Fithrah Insani.
+                    <!-- Card 2: Penjualan -->
+                    <div class="flex flex-col items-center bg-white rounded-xl shadow p-6 w-full md:w-80">
+                        <div class="bg-blue-100 p-4 rounded-full mb-3 flex items-center justify-center">
+                            <i class="fas fa-tags text-blue-600 text-3xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-1 text-center">Penjualan</h3>
+                        <p class="text-gray-700 text-sm text-center">Pakaian dijual kepada masyarakat dengan harga terjangkau mulai dari Rp 25.000 hingga Rp 75.000.</p>
+                    </div>
+                </div>
 
         </section>
     </main>
+
+            <!-- Dokumentasi Kegiatan Section -->
+    <section id="dokumentasi" class="mt-20 mb-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex items-center mb-8">
+                    <div class="h-1 w-12 bg-blue-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-800">Dokumentasi Kegiatan</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                        <img src="./Direct Marketing/2.jpg" alt="Penyampaian Hadist" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                        <img src="./Direct Marketing/1.jpg" alt="Setelah Sholat Dzuhur" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-md">
+                        <img src="./Direct Marketing/3.jpg" alt="Oleh Siswa SMAIT Fithrah Insani" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </section>
 
  <!-- Footer -->
     <footer class="bg-gray-800 text-white pt-12 pb-6">
