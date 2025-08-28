@@ -1,6 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <style>
+            .card {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                background: #fff;
+                border-radius: 12px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            .foto-landscape {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 12px;
+                background: #f3f4f6;
+                display: block;
+            }
+            .teks {
+                flex: 1;
+                font-size: 1.1rem;
+                color: #374151;
+                line-height: 1.6;
+            }
+            @media (max-width: 900px) {
+                .card {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .foto-landscape {
+                    width: 100%;
+                    max-width: 350px;
+                    height: 180px;
+                }
+            }
+        </style>
+        <style>
+            .tujuan-flex {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+            }
+            @media (min-width: 900px) {
+                .tujuan-flex {
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+            .tujuan-foto {
+                width: 420px;
+                height: 420px;
+                max-width: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+                background: #f3f4f6;
+                display: block;
+            }
+            .tujuan-text {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .tujuan-badge {
+                display: flex;
+                gap: 10px;
+                margin-top: 18px;
+                flex-wrap: wrap;
+            }
+            .tujuan-badge span {
+                padding: 6px 18px;
+                border-radius: 16px;
+                font-size: 15px;
+                font-weight: 500;
+                display: inline-block;
+            }
+            .tujuan-badge .kesehatan { background: #dbeafe; color: #2563eb; }
+            .tujuan-badge .edukasi { background: #d1fae5; color: #059669; }
+            .tujuan-badge .siswa { background: #fef3c7; color: #b45309; }
+        </style>
+        <style>
+            .card {
+                max-width: 700px;
+                margin: 0 auto;
+                background: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                text-align: center;
+            }
+            .foto {
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
+                border-radius: 12px;
+                margin-bottom: 15px;
+                background: #e5e7eb;
+            }
+            .tags {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-bottom: 0;
+            }
+            .tag {
+                padding: 5px 12px;
+                border-radius: 15px;
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+            }
+            .tag.grammar { background: #3b82f6; }
+            .tag.edukasi { background: #10b981; }
+            .tag.siswa   { background: #facc15; color: #333; }
+        </style>
+        <style>
+            .tujuan-container {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .foto-siswa {
+                width: 350px;
+                height: 220px;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                background: #e5e7eb;
+            }
+            @media (max-width: 900px) {
+                .tujuan-container {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .foto-siswa {
+                    width: 100%;
+                    max-width: 350px;
+                    height: 180px;
+                }
+            }
+        </style>
+        <style>
+            .foto-siswa {
+                width: 180px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+        </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSIS SMAIT FITHRAH INSANI - GEMAR</title>
@@ -65,25 +217,27 @@
     <main class="container mx-auto px-4 py-12">
         <!-- Tujuan Proker Section -->
         <section class="mb-16">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-2">Tujuan Proker</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
-                <div class="flex flex-col md:flex-row items-center">
-                    <!-- Foto tujuan -->
-                    <div class="md:w-1/3 flex justify-center mb-6 md:mb-0">
-                        <div class="w-64 h-64 bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden">
-                            <img src="./GEMAR/hammam.JPG" alt="Foto Kosong" class="object-cover w-full h-full rounded-2xl">
-                        </div>
-                    </div>
-                    <!-- Isi tujuan, tidak mepet kanan -->
-                    <div class="md:w-2/3 md:pl-8 w-full">
-                        <p class="text-gray-700 text-lg md:text-left text-center">Memberikan edukasi dan meningkatkan pemahaman siswa tentang tata bahasa dan kosakata dalam bahasa inggris.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                                                                        <div class="text-center mb-8">
+                                                                                <h2 class="text-3xl font-bold text-gray-800 mb-2">Tujuan Program Kerja</h2>
+                                                                                <div class="section-divider"></div>
+                                                                        </div>
+                                                                        <div class="proker-card bg-white rounded-2xl shadow-lg md:shadow-xl px-6 py-6 md:px-12 md:py-10">
+                                                                            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-14">
+                                                                                <img src="./GEMAR/hammam.JPG" alt="Foto" class="w-[340px] h-[220px] md:w-[520px] md:h-[340px] object-cover rounded-xl">
+                                                                                <div class="text-center md:text-left">
+                                                                                    <h3 class="text-xl md:text-2xl font-semibold text-slate-800 mb-3">Tujuan Program Kerja</h3>
+                                                                                    <p class="text-base md:text-lg leading-relaxed text-slate-700 mb-4 md:mb-6 max-w-[48ch]">
+                                                                                        Memberikan edukasi dan meningkatkan pemahaman siswa tentang tata bahasa dan kosakata dalam bahasa inggris.
+                                                                                    </p>
+                                                                                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                                                                                        <span class="px-3 py-1 md:px-4 md:py-1.5 text-sm md:text-base rounded-full bg-blue-100 text-blue-700">Kesehatan</span>
+                                                                                        <span class="px-3 py-1 md:px-4 md:py-1.5 text-sm md:text-base rounded-full bg-green-100 text-green-700">Edukasi</span>
+                                                                                        <span class="px-3 py-1 md:px-4 md:py-1.5 text-sm md:text-base rounded-full bg-yellow-100 text-yellow-800">Siswa</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                            </section>
 
         <!-- Teknis Pelaksanaan Section -->
         <section class="mb-16">
