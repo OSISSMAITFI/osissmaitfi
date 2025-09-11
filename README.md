@@ -65,7 +65,6 @@ We welcome contributions from all students! Feel free to:
 ---
 <div align="center">
 	OSIS SMAIT FITHRAH INSANI
-	BY: @biezz-2
 </div>
 
 <div align="center">
