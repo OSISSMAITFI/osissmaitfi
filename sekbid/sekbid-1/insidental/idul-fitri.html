@@ -49,7 +49,6 @@
     </style>
 </head>
 <body class="bg-gray-50 font-sans">
-    <!-- Navbar -->
     <nav class="bg-green-900 bg-opacity-90 text-white sticky top-0 z-50 shadow">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
             <div class="flex items-center gap-3 mb-4 md:mb-0">
@@ -65,7 +64,6 @@
         </div>
     </nav>
 
-    <!-- Hero/Header Section -->
     <header class="hero-pattern bg-green-900 bg-opacity-70 text-white">
         <div class="container mx-auto px-4 py-10 md:py-16">
             <div class="max-w-3xl mx-auto text-center">
@@ -80,9 +78,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
-        <!-- Tujuan Section -->
         <section class="mb-16">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
@@ -113,7 +109,6 @@
             </div>
         </section>
 
-        <!-- Teknis Pelaksanaan -->
         <section class="mb-16">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
@@ -157,50 +152,53 @@
             </div>
         </section>
 
-        <!-- Dokumentasi -->
-        <section class="mb-16">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-green-800 mb-4 relative inline-block">
-                        <span class="relative z-10">Dokumentasi Kegiatan</span>
-                        <span class="absolute bottom-0 left-0 w-full h-2 bg-green-200 z-0 opacity-50"></span>
-                    </h2>
-                    <div class="w-24 h-1 bg-green-500 mx-auto mt-2"></div>
-                    <p class="text-gray-600 mt-4">Momen kebersamaan dalam menyambut hari kemenangan</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-lg col-animate">
-                        <img src="./idul-fitri/ke-1.png" 
-                             alt="Kegiatan Idul Fitri" class="w-full h-64 object-cover img-animate">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg text-gray-800 mb-2">Tanya jawab siswa</h3>
-                        </div>
+       <!-- Documentation -->
+        <section id="dokumentasi">
+            <div class="flex items-center mb-8">
+                <div class="h-1 bg-blue-600 w-12 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Dokumentasi Kegiatan</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="hadith-card bg-white rounded-lg overflow-hidden shadow-md flex flex-col items-center">
+                    <div class="w-full aspect-square flex items-center justify-center bg-gray-100">
+                        <img src="./idul-fitri/1.jpg" alt="Kegiatan Hadits of the Week" class="object-cover w-full h-full aspect-square" />
                     </div>
-                    
-                    <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-lg col-animate">
-                        <img src="./idul-fitri/ke-2.png" 
-                             alt="Kegiatan Idul Fitri" class="w-full h-64 object-cover img-animate">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg text-gray-800 mb-2">Amanat Kepala Sekolah</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-lg col-animate">
-                        <img src="./idul-fitri/ke-3.png" 
-                             alt="Kegiatan Idul Fitri" class="w-full h-64 object-cover img-animate">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-lg text-gray-800 mb-2">Musyafahah</h3>
-                        </div>
+                    <div class="p-4 w-full">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Pembacaan Al Matsurat</h3>
+                        <div class="mt-4 flex justify-between items-center"></div>
                     </div>
                 </div>
+                <!-- Gallery Item 2 -->
+                <div class="hadith-card bg-white rounded-lg overflow-hidden shadow-md flex flex-col items-center">
+                    <div class="w-full aspect-square flex items-center justify-center bg-gray-100">
+                        <img src="./idul-fitri/2.jpg" alt="Kegiatan Hadits of the Week" class="object-cover w-full h-full aspect-square" />
+                    </div>
+                    <div class="p-4 w-full">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Musyafahah siswa dengan guru</h3>
+                        <div class="mt-4 flex justify-between items-center"></div>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="hadith-card bg-white rounded-lg overflow-hidden shadow-md flex flex-col items-center">
+                    <div class="w-full aspect-square flex items-center justify-center bg-gray-100">
+                        <img src="./idul-fitri/3.jpg" alt="Kegiatan Hadits of the Week" class="object-cover w-full h-full aspect-square" />
+                    </div>
+                    <div class="p-4 w-full">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Poster peringatan Hari Idul Fitri</h3>
+                        <div class="mt-4 flex justify-between items-center"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
             </div>
         </section>
 
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white pt-12 pb-6">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
