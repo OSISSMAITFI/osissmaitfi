@@ -1,6 +1,5 @@
 [# 🏫 OSIS SMAIT FITHRAH INSANI
 
-
 ## 📖 About
 
 Welcome to the official repository of OSIS SMAIT Fithrah Insani! This repository serves as a central hub for our organization's digital resources and projects.
