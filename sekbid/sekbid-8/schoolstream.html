@@ -23,10 +23,8 @@
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between">
-            <!-- Logo and School Name -->
             <div class="flex items-center justify-center md:justify-start space-x-3 mb-2 md:mb-0">
                 <span class="flex items-center">
                     <i class="fas fa-camera text-black text-2xl mr-2" title="Kamera"></i>
@@ -34,7 +32,6 @@
                 <h1 class="text-xl font-bold text-black flex items-center gap-2">OSIS SMAIT FITHRAH INSANI</h1>
             </div>
 
-            <!-- Desktop Navigation -->
             <nav class="hidden md:flex flex-1 justify-center gap-4">
                 <a href="../../index.html" class="px-5 py-2 rounded-lg font-semibold shadow bg-gray-200 text-gray-700 hover:bg-orange-700 hover:text-white transition-all">Home</a>
                 <a href="../../about.html" class="px-5 py-2 rounded-lg font-semibold shadow bg-gray-200 text-gray-700 hover:bg-orange-700 hover:text-white transition-all">About</a>
@@ -44,13 +41,11 @@
                 </div>
             </nav>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
                 <a href="../../index.html" class="text-gray-600 font-medium py-2">Home</a>
@@ -63,7 +58,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="bg-orange-700 text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">SchoolStream</h1>
@@ -74,15 +68,12 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
-        <!-- Tujuan Proker Section -->
         <section class="mb-16">
             <div class="flex items-center mb-8">
                 <div class="h-1 bg-blue-600 w-16 mr-4"></div>
                 <h2 class="text-3xl font-bold text-gray-800">Tujuan Proker</h2>
             </div>
-            <!-- Ganti src di bawah ini dengan path foto milikmu -->
             <div class="w-full max-w-md mx-auto mb-8 h-64 md:h-80 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center">
                 <img src="../sekbid-8/SchoolStream/Rhesa.JPG" alt="Foto Tujuan Proker" class="object-cover w-full h-full" style="aspect-ratio:3/2;" loading="lazy">
             </div>
@@ -93,7 +84,6 @@
             </div>
         </section>
 
-        <!-- Teknis Pelaksanaan Section -->
         <section class="mb-16">
             <div class="flex items-center mb-8">
                 <div class="h-1 bg-blue-600 w-16 mr-4"></div>
@@ -106,10 +96,42 @@
             </div>
         </section>
 
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Program Gallery</h2>
+                <div class="w-20 h-1 bg-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden shadow-lg gallery-item">
+                    <img src="./SchoolStream/1.jpg" 
+                         alt="Healthy Student Activity" 
+                         class="w-full h-108 object-cover">
+                    <div class="p-4 bg-white">
+                    </div>
+                </div>
+                
+                <div class="rounded-xl overflow-hidden shadow-lg gallery-item">
+                    <img src="./SchoolStream/2.jpg" 
+                         alt="Healthy Student Activity" 
+                         class="w-full h-108 object-cover">
+                    <div class="p-4 bg-white">
+                    </div>
+                </div>
+                
+                <div class="rounded-xl overflow-hidden shadow-lg gallery-item">
+                    <img src="./SchoolStream/3.jpg" 
+                         alt="Healthy Student Activity" 
+                         class="w-full h-108 object-cover">
+                    <div class="p-4 bg-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
- <!-- Footer -->
-    <footer class="bg-orange-700 text-white pt-12 pb-6">
+ <footer class="bg-orange-700 text-white pt-12 pb-6">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
