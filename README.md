@@ -1,144 +1,110 @@
-[# 🏫 OSIS SMAIT FITHRAH INSANI
+# <div align='center'>🏫 OSIS SMAIT FITHRAH INSANI</div>
 
-## 📖 About
+<div align='center'>
 
-Welcome to the official repository of OSIS SMAIT Fithrah Insani! This repository serves as a central hub for our organization's digital resources and projects.
+![OSIS SMAIT FITHRAH INSANI Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF7npYKWjfX8GW9ArtmGdG-LXNdK7876WDfg&s)
 
-## 🎯 Vision & Mission
+<p align="center">
+    <img src="https://img.shields.io/badge/Periode-2024%2F2025-0A66C2?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Periode"/>
+  
+    <img src="https://img.shields.io/badge/Status-Aktif-28A745?style=for-the-badge&logo=gnome&logoColor=white" alt="Status"/>
 
-### Vision
-Welcome to the official repository of OSIS SMAIT Fithrah ! This repository serves as a central hub for our organization's digital resources and projects.
-
-### Mission
-- 🌟 Integration of Islamic Values
-- 📚 Discipline & Exemplary
-- 🎨 Potential Development
-
-## 🔧 Structure
-
-- 👑 **Ketua OSIS**
-- 👥 **Wakil Ketua**
-- 📝 **Sekretaris**
-- 💰 **Bendahara**
-- 📋 **Divisi-divisi**
-	- Divisi Keagamaan
-	- Divisi Kedisiplinan
-	- Divisi Pendidikan
-	- Divisi Literasi
-	- Divisi Bakat dan Minat
-	- Divisi Kesehatan
-	- Divisi Kewirausahaan
-	- Divisi Media
-
-## 📅 Programs
-
-- Responsible for religious and spiritual activities at school.
-- Develop a sense of nationalism and patriotism.
-- Educate students to be insightful
-- Educate students in the field of language
-- Developing students' talents and creativity.
-- Bertanggung jawab dalam kebersihan dan kesehatan.
-- Train entrepreneurship and manage funds.
-- Manage OSIS communications and information.
-
-## 📞 Contact
-
-- 📧 Email: [osissmaitfi@gmail.com](osissmaitfi@gmail.com)
-- 📱 Instagram: [@osissmaitfi](https://www.instagram.com/osissmaitfi/)
-- 🌐 Website: [@osissmaitfi website](https://osissmaitfi.github.io/osissmaitfi/)
-
-## 🤝 Contributing
-
-We welcome contributions from all students! Feel free to:
-- Submit suggestions for improvement
-- Report issues
-- Participate in our programs
-- Share creative ideas
-
-## ⚖️ License
-
-© 2024 OSIS SMAIT Future Islamic. All Rights Reserved.
-
----
-<div align="center">
-	OSIS SMAIT FITHRAH INSANI
-</div>
-
-<div align="center">
+    <a href="https://github.com/OSISSMAITFI/osissmaitfi">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"/>
+  </a>
+ 
+    <a href="https://www.instagram.com/osissmaitfi/">
+    <img src="https://img.shields.io/badge/Instagram-osissmaitfi-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+  </a>
+  
+    <a href="https://osissmaitfi.github.io/osissmaitfi/">
+    <img src="https://img.shields.io/badge/Website-osissmaitfi-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"/>
+  </a>
+</p>
 
 </div>
 
-## Cara upload / push repo ini ke GitHub
+## 📋 Daftar Isi
 
-Panduan singkat untuk meng-upload seluruh isi folder proyek ke GitHub dari PowerShell (Windows, `pwsh.exe`). Pilih salah satu metode (SSH direkomendasikan).
-
-- Pastikan berada di folder proyek:
-
-```powershell
-cd /d J:\bhaskara\bhaskara
-```
-
-- Jika belum ada repo git lokal, inisialisasi dan commit semua file:
-
-```powershell
-# Inisialisasi dan commit
-git init
-git add -A
-git commit -m "Initial commit: add website files, README, LICENSE, .gitignore"
-git branch -M main
-```
-
-- Opsi A — Push via SSH (direkomendasikan)
-
-1. Buat kunci SSH (jika belum):
-
-```powershell
-ssh-keygen -t ed25519 -C "you@example.com" -f $env:USERPROFILE\.ssh\id_ed25519 -N ""
-```
-
-2. Salin public key dan tambahkan ke GitHub (Settings → SSH and GPG keys → New SSH key):
-
-```powershell
-Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | Set-Clipboard
-```
-
-3. (Jika perlu) jalankan ssh-agent dan tambahkan key — atau gunakan per-command SSH (tidak perlu agent):
-
-```powershell
-# Jalankan agent (memerlukan hak admin)
-Set-Service -Name ssh-agent -StartupType Automatic
-Start-Service ssh-agent
-ssh-add $env:USERPROFILE\.ssh\id_ed25519
-
-# Alternatif: gunakan ssh per-command tanpa agent
-# git -c core.sshCommand="ssh -i C:/Users/<user>/.ssh/id_ed25519 -o IdentitiesOnly=yes" push -u origin main
-```
-
-4. Set remote SSH dan push:
-
-```powershell
-git remote add origin git@github.com:OSISSMAITFI/osissmaitfi.git
-git pull origin main --allow-unrelated-histories   # jika remote berisi commit lain
-git push -u origin main
-```
-
-- Opsi B — Push via HTTPS (gunakan Personal Access Token)
-
-```powershell
-git remote set-url origin https://github.com/OSISSMAITFI/osissmaitfi.git
-git pull origin main --allow-unrelated-histories
-git push -u origin main
-```
-
-Saat diminta autentikasi over HTTPS, gunakan GitHub username dan Personal Access Token (PAT) sebagai password.
-
-Troubleshooting singkat:
-- "Permission denied (publickey)": pastikan public key dipasang di akun GitHub yang punya akses ke repo.
-- "Updates were rejected because the remote contains work that you do not have locally": jalankan `git pull origin main --allow-unrelated-histories` lalu selesaikan konflik, atau jika Anda ingin menimpa remote gunakan `git push --force` (berisiko).
-
-Menambah collaborator:
-- Pemilik repo dapat menambahkan kolaborator via GitHub → Settings → Manage access → Invite collaborators.
+| No. | Bagian |
+|-----|---------|
+| 1. | [![Deskripsi](https://img.shields.io/badge/📖-Tentang_Kami-blue?style=for-the-badge)](#-tentang-kami)
+| 2. | [![Visi & Misi](https://img.shields.io/badge/🎯-Visi__&__Misi-green?style=for-the-badge)](#-visi--misi)
+| 3. | [![Struktur OSIS](https://img.shields.io/badge/🔧-Struktur__Organisasi-purple?style=for-the-badge)](#-struktur-organisasi)
+| 4. | [![Seksi Bidang](https://img.shields.io/badge/✨-Seksi__Bidang-yellow?style=for-the-badge)](#-8-seksi-bidang-osis)
+| 5. | [![Kontak](https://img.shields.io/badge/📞-Kontak-red?style=for-the-badge)](#-kontak)
+| 6. | [![Kontribusi](https://img.shields.io/badge/🤝-Kontribusi-0A66C2?style=for-the-badge)](#-kontribusi)
 
 ---
+
+# 📖 Tentang Kami
+
+Selamat datang di repositori resmi **Organisasi Siswa Intra Sekolah (OSIS) SMAIT FITHRAH INSANI**.
+
+Repositori ini berfungsi sebagai pusat digital untuk semua sumber daya, dokumentasi program kerja, dan proyek-proyek digital yang dikelola oleh OSIS. Kami berkomitmen untuk menciptakan lingkungan sekolah yang inspiratif, religius, dan berprestasi.
+
+# 🎯 Visi & Misi
+
+### Visi
+"Mewujudkan organisasi siswa yang **berintegritas tinggi** dalam bingkai nilai-nilai Islam, **disiplin**, **berprestasi**, dan **proaktif** dalam pengembangan potensi siswa di SMAIT FITHRAH INSANI."
+
+### Misi
+* **🌟 Integrasi Nilai Islam:** Mendorong dan mendukung kegiatan keagamaan serta pembentukan karakter Islami.
+* **📚 Disiplin & Keteladanan:** Menegakkan kedisiplinan dan menjadi teladan bagi seluruh siswa.
+* **🎨 Pengembangan Potensi:** Memfasilitasi dan mengembangkan bakat, kreativitas, dan potensi kepemimpinan siswa.
+* **💡 Kontribusi Positif:** Aktif memberikan kontribusi dan inovasi untuk kemajuan sekolah.
+
+# 🔧 Struktur Organisasi
+
+Struktur kepengurusan inti OSIS yang bertugas mengkoordinasikan seluruh kegiatan organisasi:
+
+* 👑 **Ketua OSIS**
+* 👥 **Wakil Ketua**
+* 📝 **Sekretaris**
+* 💰 **Bendahara**
+* 📋 **Koordinator Seksi Bidang**
+
+# ✨ 8 Seksi Bidang OSIS
+
+Berikut adalah 8 Seksi Bidang (Sekbid) yang menjadi tulang punggung kegiatan OSIS, beserta tanggung jawab dan program kerja utamanya:
+
+| Seksi Bidang | Tanggung Jawab Utama | Deskripsi Singkat |
+|:-------------|:---------------------|:------------------|
+| **Sekbid 1** | Keagamaan dan Kerohanian | Bertanggung jawab atas kegiatan **keagamaan dan kerohanian** di sekolah. |
+| **Sekbid 2** | Kebangsaan dan Patriotisme | Mengembangkan **rasa nasionalisme dan patriotisme**. |
+| **Sekbid 3** | Pendidikan dan Wawasan | Mengedukasi siswa untuk **berwawasan** dan mengembangkan pengetahuan umum. |
+| **Sekbid 4** | Bahasa dan Komunikasi | Mengedukasi siswa dalam **bidang bahasa** (misal: English/Arabic/Indonesian club). |
+| **Sekbid 5** | Bakat dan Kreativitas | Mengembangkan **bakat dan kreativitas siswa** (seni, olahraga, dll.). |
+| **Sekbid 6** | Kebersihan dan Kesehatan | Bertanggung jawab dalam **kebersihan dan kesehatan** lingkungan sekolah. |
+| **Sekbid 7** | Kewirausahaan dan Dana | Melatih **kewirausahaan dan mengelola dana** operasional OSIS. |
+| **Sekbid 8** | Komunikasi dan Informasi | Mengelola **komunikasi dan informasi OSIS** (media sosial, website, publikasi). |
+
+> **Lihat Detail:** Untuk informasi lebih lanjut mengenai program kerja setiap Seksi Bidang, silakan kunjungi [Website Resmi OSIS](https://osissmaitfi.github.io/osissmaitfi/) kami.
+
+# 📞 Kontak
+
+Hubungi kami untuk pertanyaan, saran, atau kolaborasi:
+
+* 📧 **Email Resmi:** [osissmaitfi@gmail.com](mailto:osissmaitfi@gmail.com)
+* 📱 **Instagram:** [@osissmaitfi](https://www.instagram.com/osissmaitfi/) (Saluran komunikasi utama)
+* 🌐 **Website:** [@osissmaitfi website](https://osissmaitfi.github.io/osissmaitfi/)
+
+# 🤝 Kontribusi
+
+Kami sangat menyambut partisipasi dari seluruh warga SMAIT Fithrah Insani. Anda dapat berkontribusi dengan cara:
+
+* Memberikan saran/masukan untuk perbaikan program.
+* Melaporkan *issues* terkait aset digital atau kegiatan.
+* Berpartisipasi aktif dalam kegiatan/program kerja OSIS.
+* Berbagi ide-ide kreatif dan inovatif untuk sekolah.
+
+# ⚖️ Lisensi
+
+© 2024 OSIS SMAIT FITHRAH INSANI. All Rights Reserved.
+
+---
+<div align="center">
+	✨ Berintegritas, Berprestasi, Menginspirasi ✨
+</div>
 
 
