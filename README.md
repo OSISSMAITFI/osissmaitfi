@@ -2,7 +2,7 @@
 
 <div align='center'>
 
-![OSIS SMAIT FITHRAH INSANI Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF7npYKWjfX8GW9ArtmGdG-LXNdK7876WDfg&s)
+![OSIS SMAIT FITHRAH INSANI Banner](https://www.osissmaitfi.my.id/global/logo.png)
 
 <p align="center">
     <img src="https://img.shields.io/badge/Periode-2024%2F2025-0A66C2?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Periode"/>
