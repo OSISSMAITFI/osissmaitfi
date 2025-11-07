@@ -62,7 +62,6 @@ Struktur kepengurusan inti OSIS yang bertugas mengkoordinasikan seluruh kegiatan
 * 👥 **Wakil Ketua**
 * 📝 **Sekretaris**
 * 💰 **Bendahara**
-* 📋 **Koordinator Seksi Bidang**
 
 # ✨ 8 Seksi Bidang OSIS
 
