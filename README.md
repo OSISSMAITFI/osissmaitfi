@@ -5,7 +5,7 @@
 ![OSIS SMAIT FITHRAH INSANI Banner](https://www.osissmaitfi.my.id/global/logo.png)
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Periode-2024%2F2025-0A66C2?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Periode"/>
+    <img src="https://img.shields.io/badge/Periode-2025%2026-0A66C2?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Periode"/>
   
     <img src="https://img.shields.io/badge/Status-Aktif-28A745?style=for-the-badge&logo=gnome&logoColor=white" alt="Status"/>
 
