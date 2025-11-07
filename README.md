@@ -76,7 +76,7 @@ Berikut adalah 8 Seksi Bidang (Sekbid) yang menjadi tulang punggung kegiatan OSI
 | **Sekbid 4** | Bahasa dan Komunikasi | Mengedukasi siswa dalam **bidang bahasa** (misal: English/Arabic/Indonesian club). |
 | **Sekbid 5** | Bakat dan Kreativitas | Mengembangkan **bakat dan kreativitas siswa** (seni, olahraga, dll.). |
 | **Sekbid 6** | Kebersihan dan Kesehatan | Bertanggung jawab dalam **kebersihan dan kesehatan** lingkungan sekolah. |
-| **Sekbid 7** | Kewirausahaan dan Dana | Melatih **kewirausahaan dan mengelola dana** operasional OSIS. |
+| **Sekbid 7** | Kewirausahaan | Melatih **kewirausahaan dan mengelola dana** operasional OSIS. |
 | **Sekbid 8** | Komunikasi dan Informasi | Mengelola **komunikasi dan informasi OSIS** (media sosial, website, publikasi). |
 
 > **Lihat Detail:** Untuk informasi lebih lanjut mengenai program kerja setiap Seksi Bidang, silakan kunjungi [Website Resmi OSIS](https://osissmaitfi.github.io/osissmaitfi/) kami.
