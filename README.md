@@ -45,8 +45,6 @@ Repositori ini berfungsi sebagai pusat digital untuk semua sumber daya, dokument
 
 # 🎯 Visi & Misi
 
-# 🎯 Visi & Misi
-
 ### Visi
 "Menjadi organisasi yang **Inovatif, Kolaboratif,** dan **Bermanfaat** bagi seluruh warga sekolah."
 
