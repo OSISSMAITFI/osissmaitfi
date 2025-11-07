@@ -99,7 +99,7 @@ Kami sangat menyambut partisipasi dari seluruh warga SMAIT Fithrah Insani. Anda 
 
 # ⚖️ Lisensi
 
-© 2024 OSIS SMAIT FITHRAH INSANI. All Rights Reserved.
+© 2025 OSIS SMAIT FITHRAH INSANI. All Rights Reserved.
 
 ---
 <div align="center">
