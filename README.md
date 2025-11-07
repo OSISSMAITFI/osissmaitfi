@@ -45,14 +45,15 @@ Repositori ini berfungsi sebagai pusat digital untuk semua sumber daya, dokument
 
 # 🎯 Visi & Misi
 
+# 🎯 Visi & Misi
+
 ### Visi
-"Mewujudkan organisasi siswa yang **berintegritas tinggi** dalam bingkai nilai-nilai Islam, **disiplin**, **berprestasi**, dan **proaktif** dalam pengembangan potensi siswa di SMAIT FITHRAH INSANI."
+"Menjadi organisasi yang **Inovatif, Kolaboratif,** dan **Bermanfaat** bagi seluruh warga sekolah."
 
 ### Misi
-* **🌟 Integrasi Nilai Islam:** Mendorong dan mendukung kegiatan keagamaan serta pembentukan karakter Islami.
-* **📚 Disiplin & Keteladanan:** Menegakkan kedisiplinan dan menjadi teladan bagi seluruh siswa.
-* **🎨 Pengembangan Potensi:** Memfasilitasi dan mengembangkan bakat, kreativitas, dan potensi kepemimpinan siswa.
-* **💡 Kontribusi Positif:** Aktif memberikan kontribusi dan inovasi untuk kemajuan sekolah.
+1. **🚀 Program Kreatif:** Menghadirkan program kreatif, baik akademik maupun non-akademik.
+2. **🤝 Kolaborasi Harmonis:** Membangun kolaborasi yang harmonis dengan guru, staf, dan pihak sekolah untuk mendukung tercapainya visi pendidikan SMAIT Fithrah Insani.
+3. **💡 Aksi Bermanfaat:** Menghadirkan kegiatan sosial, layanan internal, dan budaya apresiasi sebagai wujud nyata OSIS yang bermanfaat bagi seluruh warga sekolah.
 
 # 🔧 Struktur Organisasi
 
@@ -103,7 +104,7 @@ Kami sangat menyambut partisipasi dari seluruh warga SMAIT Fithrah Insani. Anda 
 
 ---
 <div align="center">
-	✨ Berintegritas, Berprestasi, Menginspirasi ✨
+	✨ Inovatif, Kolaboratif, Bermanfaat ✨
 </div>
 
 
